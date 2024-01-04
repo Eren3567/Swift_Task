@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstFirebaseApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofd-2O-OM8">
+                                <rect key="frame" x="65" y="127" width="261" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oac-hD-Lek">
+                                <rect key="frame" x="44" y="340" width="117" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Giris Yapınız"/>
+                                <connections>
+                                    <action selector="GirisYapınızButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Erb-cc-0Ks"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nV-yQ-Brg">
+                                <rect key="frame" x="215" y="342" width="124" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Kayıt Olunıuz"/>
+                                <connections>
+                                    <action selector="KayitOlunuzButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGC-Xm-Rl4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="sifrenizi giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yw1-Vq-Meu">
+                                <rect key="frame" x="65" y="198" width="261" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zE4-3t-ppz"/>
+                    <connections>
+                        <outlet property="emailgiriniztext" destination="ofd-2O-OM8" id="c4L-lA-xUO"/>
+                        <outlet property="sifrenizigiriniztext" destination="Yw1-Vq-Meu" id="Tp1-yH-xeY"/>
+                        <segue destination="GeQ-9L-e6t" kind="presentation" identifier="ToFeedVc" modalPresentationStyle="fullScreen" id="pQe-Rh-Ff2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-663.35877862595419" y="63.380281690140848"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="5oq-dz-qe9">
+            <objects>
+                <viewController id="FBq-90-TNf" customClass="SettingViewController" customModule="FirstFirebaseApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XMe-5C-Bn8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfl-8C-mEY">
+                                <rect key="frame" x="150" y="357" width="94" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Çıkış Yap"/>
+                                <connections>
+                                    <action selector="CikisYapButton:" destination="FBq-90-TNf" eventType="touchUpInside" id="1dB-Lg-BwW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fGC-VA-SVb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" image="gearshape" catalog="system" id="UCX-Jx-BIt"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="Toviewcontrollervc" modalPresentationStyle="fullScreen" id="oEc-gb-IL7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HfV-Gl-14Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="771"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="0Ms-qb-74A">
+            <objects>
+                <viewController id="E3F-2h-mZz" customClass="UploadViewController" customModule="FirstFirebaseApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ysg-1w-OrX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ekran Resmi 2023-12-17 12.36.49" translatesAutoresizingMaskIntoConstraints="NO" id="XQi-x5-aEz">
+                                <rect key="frame" x="76" y="133" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yorum Girebilirsiniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIF-Ne-WJA">
+                                <rect key="frame" x="76" y="324" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afr-10-N2Y">
+                                <rect key="frame" x="158" y="402" width="77" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Kaydet"/>
+                                <connections>
+                                    <action selector="KaydetButton:" destination="E3F-2h-mZz" eventType="touchUpInside" id="tfh-VD-QkC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SfP-SM-Y97"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" image="square.and.arrow.up" catalog="system" id="Na5-6O-Wky"/>
+                    <connections>
+                        <outlet property="Resim" destination="XQi-x5-aEz" id="nLd-bD-6gs"/>
+                        <outlet property="YorumText" destination="KIF-Ne-WJA" id="Wo2-ZT-8Py"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SF2-eq-FaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.48854961832058" y="70.422535211267615"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="DiQ-DF-Mru">
+            <objects>
+                <viewController id="jLR-L8-63E" customClass="FeedController" customModule="FirstFirebaseApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ccg-SN-Crt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d1X-T3-Nm2">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="366" id="ONt-vn-abL" customClass="FeedCell" customModule="FirstFirebaseApplication" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="366"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ONt-vn-abL" id="VPQ-tB-Taq" customClass="FeedCell" customModule="FirstFirebaseApplication" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="366"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgJ-IP-W1d">
+                                                    <rect key="frame" x="40" y="16" width="313" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ekran Resmi 2023-12-17 12.36.49" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-nE-619">
+                                                    <rect key="frame" x="10" y="80" width="373" height="152"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="152" id="gUh-nV-IR9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanıcı Yorumu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJi-eb-5ex">
+                                                    <rect key="frame" x="30" y="282" width="323" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="43" id="4ja-AI-Smy"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leading" constant="10" id="Ipb-hk-NOW"/>
+                                                <constraint firstItem="SJi-eb-5ex" firstAttribute="top" secondItem="PYC-nE-619" secondAttribute="bottom" constant="50" id="Kuh-o2-KWk"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="43" id="LMq-yf-e72"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SJi-eb-5ex" secondAttribute="trailing" constant="20" id="Nfb-KJ-iiJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="PYC-nE-619" secondAttribute="trailing" constant="10" id="QEM-yj-ndV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TgJ-IP-W1d" secondAttribute="trailing" constant="20" id="Sbt-ve-Cbu"/>
+                                                <constraint firstItem="SJi-eb-5ex" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leadingMargin" constant="10" id="YEv-4R-Qcl"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leading" constant="10" id="bTU-6D-cj7"/>
+                                                <constraint firstItem="TgJ-IP-W1d" firstAttribute="top" secondItem="VPQ-tB-Taq" secondAttribute="topMargin" constant="5" id="gf4-hU-Wgm"/>
+                                                <constraint firstAttribute="trailing" secondItem="PYC-nE-619" secondAttribute="trailing" constant="10" id="rcG-Uc-DDR"/>
+                                                <constraint firstItem="TgJ-IP-W1d" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leadingMargin" constant="20" id="rjg-b6-Mvi"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="43" id="yq3-T8-xx8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="KullanıcıYorumuText" destination="SJi-eb-5ex" id="3Np-C7-RTs"/>
+                                            <outlet property="emailtext2" destination="TgJ-IP-W1d" id="j8d-eb-nzs"/>
+                                            <outlet property="imageview" destination="PYC-nE-619" id="0fK-ga-ugF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iTb-GU-ghV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iTb-GU-ghV" firstAttribute="bottom" secondItem="d1X-T3-Nm2" secondAttribute="bottom" id="GoK-XR-e1c"/>
+                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="top" secondItem="iTb-GU-ghV" secondAttribute="top" id="L8w-0P-CNM"/>
+                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="leading" secondItem="iTb-GU-ghV" secondAttribute="leading" id="csl-9E-nj8"/>
+                            <constraint firstItem="iTb-GU-ghV" firstAttribute="trailing" secondItem="d1X-T3-Nm2" secondAttribute="trailing" id="yZw-t2-Epu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="rectangle.portrait.on.rectangle.portrait" catalog="system" id="9a0-9E-Tbf"/>
+                    <connections>
+                        <outlet property="Tableview" destination="d1X-T3-Nm2" id="TeX-SI-wzG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdM-gF-aNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.48854961832058" y="-535.21126760563379"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Jdf-gz-8qm">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" id="GeQ-9L-e6t" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Lu4-bP-Oj8"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t5X-eF-AUr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jLR-L8-63E" kind="relationship" relationship="viewControllers" id="lP4-3w-rzH"/>
+                        <segue destination="E3F-2h-mZz" kind="relationship" relationship="viewControllers" id="Zye-zI-8te"/>
+                        <segue destination="FBq-90-TNf" kind="relationship" relationship="viewControllers" id="aYH-Gh-jJ3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQ4-DF-WVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="-232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ekran Resmi 2023-12-17 12.36.49" width="1276" height="860"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="rectangle.portrait.on.rectangle.portrait" catalog="system" width="118" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
