@@ -152,38 +152,50 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgJ-IP-W1d">
-                                                    <rect key="frame" x="40" y="16" width="313" height="21"/>
+                                                    <rect key="frame" x="40" y="16" width="313" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="38" id="c1U-Bw-7Hb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanıcı Yorumu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJi-eb-5ex">
+                                                    <rect key="frame" x="30" y="276" width="323" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="gAe-IS-S1J"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ekran Resmi 2023-12-17 12.36.49" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-nE-619">
-                                                    <rect key="frame" x="10" y="80" width="373" height="152"/>
+                                                    <rect key="frame" x="15" y="110" width="353" height="56"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="152" id="gUh-nV-IR9"/>
+                                                        <constraint firstAttribute="height" constant="56" id="gUh-nV-IR9"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="v3C-Nv-Vfd"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanıcı Yorumu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJi-eb-5ex">
-                                                    <rect key="frame" x="30" y="282" width="323" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="43" id="4ja-AI-Smy"/>
-                                                <constraint firstItem="PYC-nE-619" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leading" constant="10" id="Ipb-hk-NOW"/>
-                                                <constraint firstItem="SJi-eb-5ex" firstAttribute="top" secondItem="PYC-nE-619" secondAttribute="bottom" constant="50" id="Kuh-o2-KWk"/>
-                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="43" id="LMq-yf-e72"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="56" id="4ja-AI-Smy"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="56" id="8fu-HW-fKp"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leading" constant="15" id="Ipb-hk-NOW"/>
+                                                <constraint firstItem="SJi-eb-5ex" firstAttribute="top" secondItem="PYC-nE-619" secondAttribute="bottom" constant="110" id="Kuh-o2-KWk"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="56" id="LMq-yf-e72"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="SJi-eb-5ex" secondAttribute="trailing" constant="20" id="Nfb-KJ-iiJ"/>
-                                                <constraint firstAttribute="trailing" secondItem="PYC-nE-619" secondAttribute="trailing" constant="10" id="QEM-yj-ndV"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="56" id="PAQ-g4-f1v"/>
+                                                <constraint firstAttribute="trailing" secondItem="PYC-nE-619" secondAttribute="trailing" constant="25" id="QEM-yj-ndV"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="TgJ-IP-W1d" secondAttribute="trailing" constant="20" id="Sbt-ve-Cbu"/>
                                                 <constraint firstItem="SJi-eb-5ex" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leadingMargin" constant="10" id="YEv-4R-Qcl"/>
-                                                <constraint firstItem="PYC-nE-619" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leading" constant="10" id="bTU-6D-cj7"/>
+                                                <constraint firstItem="TgJ-IP-W1d" firstAttribute="top" secondItem="VPQ-tB-Taq" secondAttribute="topMargin" constant="5" id="bKy-Cr-Phn"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leading" constant="15" id="bTU-6D-cj7"/>
                                                 <constraint firstItem="TgJ-IP-W1d" firstAttribute="top" secondItem="VPQ-tB-Taq" secondAttribute="topMargin" constant="5" id="gf4-hU-Wgm"/>
-                                                <constraint firstAttribute="trailing" secondItem="PYC-nE-619" secondAttribute="trailing" constant="10" id="rcG-Uc-DDR"/>
+                                                <constraint firstAttribute="trailing" secondItem="PYC-nE-619" secondAttribute="trailing" constant="25" id="rcG-Uc-DDR"/>
                                                 <constraint firstItem="TgJ-IP-W1d" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leadingMargin" constant="20" id="rjg-b6-Mvi"/>
-                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="43" id="yq3-T8-xx8"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="56" id="vq2-MO-ZKk"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="56" id="xrn-8S-SBI"/>
+                                                <constraint firstItem="PYC-nE-619" firstAttribute="top" secondItem="TgJ-IP-W1d" secondAttribute="bottom" constant="56" id="yq3-T8-xx8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
