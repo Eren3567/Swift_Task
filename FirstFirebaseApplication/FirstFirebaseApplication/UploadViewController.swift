@@ -69,7 +69,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                     
                                     }
                                     else   {
-                                        
+                                        self.Resim.image = UIImage(named: "Ekran Resmi 2023-12-17 12.36.49")
+                                        self.YorumText.text = ""
+                                        self.tabBarController?.selectedIndex = 0
                                     }
                                 }
                                 }
