@@ -25,8 +25,9 @@ class ViewController: UIViewController {
 
     @IBAction func SendButton(_ sender: Any) {
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let sendviewcontroller = storyboard!.instantiateViewController(withIdentifier: "SheetB") as! ViewControllerB
+        let sendviewcontroller = storyboard.instantiateViewController(withIdentifier: "SheetB") as! ViewControllerB
         let entertext = Text.text
         sendviewcontroller.message = entertext!
         let SendPerson = Person(Personid: 30,PersonName: "name")
