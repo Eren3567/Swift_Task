@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A98A5D02B5C95C500612600 /* ViewControllerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98A5CF2B5C95C500612600 /* ViewControllerSetting.swift */; };
 		7AABEFA42B5864F300D4791F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AABEFA32B5864F300D4791F /* AppDelegate.swift */; };
 		7AABEFA62B5864F300D4791F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AABEFA52B5864F300D4791F /* SceneDelegate.swift */; };
 		7AABEFA82B5864F300D4791F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AABEFA72B5864F300D4791F /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A98A5CF2B5C95C500612600 /* ViewControllerSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSetting.swift; sourceTree = "<group>"; };
 		7AABEFA02B5864F300D4791F /* ErenCetintasSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErenCetintasSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AABEFA32B5864F300D4791F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AABEFA52B5864F300D4791F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				7AABEFA32B5864F300D4791F /* AppDelegate.swift */,
 				7AABEFA52B5864F300D4791F /* SceneDelegate.swift */,
+				7A98A5CF2B5C95C500612600 /* ViewControllerSetting.swift */,
 				7AABEFA72B5864F300D4791F /* ViewController.swift */,
 				7AABEFA92B5864F300D4791F /* Main.storyboard */,
 				7AABEFAC2B5864F300D4791F /* Assets.xcassets */,
@@ -238,6 +241,7 @@
 				7AABEFA82B5864F300D4791F /* ViewController.swift in Sources */,
 				7AABEFA42B5864F300D4791F /* AppDelegate.swift in Sources */,
 				7AABEFA62B5864F300D4791F /* SceneDelegate.swift in Sources */,
+				7A98A5D02B5C95C500612600 /* ViewControllerSetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
