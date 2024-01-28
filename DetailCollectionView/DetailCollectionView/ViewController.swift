@@ -70,11 +70,13 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,Co
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let getArray = FilmArray[indexPath.row]
         let cell = Collection.dequeueReusableCell(withReuseIdentifier: "VcCollection", for: indexPath) as! CollectionViewCell
+       
         cell.FilmName.text = getArray.FilmTitle
         cell.Image.image = UIImage(named: getArray.FilmImageName)
         cell.FilmPrice.text = String(format: "%.2f", getArray.FilmPrice!)
 
-
+        cell.ProtocolAdd = self
+        cell.indexpath = indexPath
         
         return cell
         
