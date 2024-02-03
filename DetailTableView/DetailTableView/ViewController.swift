@@ -6,16 +6,16 @@
 //
 
 import UIKit
-
+//
 class ViewController: UIViewController {
- var mealList = [Class2]()
+ var mealList = [Class2]() //Neyin listesini neye atıyor ?
     
     @IBOutlet weak var Table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         Table.dataSource = self
         Table.delegate = self
-        
+        // Class2 about y1, y2, y3, y4 for mealname, mealimage, mealprice
         let y1 = Class2(mealid: 1, mealname: "Ayran", mealimage: "ayran", mealPrice: 3)
         let y2 = Class2(mealid: 2, mealname: "Baklava", mealimage: "baklava", mealPrice: 20)
         let y3 = Class2(mealid: 3, mealname: "Fanta", mealimage: "fanta", mealPrice: 6)
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         let y13 = Class2(mealid: 13, mealname: "Sütlaç", mealimage: "sutlac", mealPrice: 12)
         let y14 = Class2(mealid: 14, mealname: "Tiramisu", mealimage: "tiramisu", mealPrice: 18)
         
-        
+        //mealList for y1,y2,y3
         mealList.append(y1)
         mealList.append(y2)
         mealList.append(y3)
@@ -52,19 +52,19 @@ class ViewController: UIViewController {
 
 }
 
-
+//get mealList from table context view
 extension ViewController: UITableViewDelegate,UITableViewDataSource,TableViewCellProtocol{
     func AddProtocol(indexpath: IndexPath) {
         let getmeal = mealList[indexpath.row]
         print(getmeal.mealname)
         print(getmeal.mealimage)
         print("\(getmeal.mealPrice) TL ")
-    }
+    }//end extension
     
-    
+   // return -> numberOfRowsInSection
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mealList.count
-    }
+    }//end func
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let getmeal = mealList[indexPath.row]
@@ -81,7 +81,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource,TableViewCel
         return cell
         
 
-    }
+    }//End class
     
     
     
