@@ -54,19 +54,17 @@
                                                     <color key="textColor" systemColor="systemBlueColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5q-8V-Jyo">
-                                                    <rect key="frame" x="171" y="12" width="52" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXq-hS-LnH">
-                                                    <rect key="frame" x="259" y="28" width="41.333333333333314" height="35"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXq-hS-LnH">
+                                                    <rect key="frame" x="186" y="63" width="41" height="195"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemBlueColor"/>
                                                     <color key="highlightedColor" systemColor="scrollViewTexturedBackgroundColor"/>
                                                     <color key="shadowColor" systemColor="groupTableViewBackgroundColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Stj-AS-bYq">
+                                                    <rect key="frame" x="295" y="49.666666666666629" width="22" height="20.999999999999972"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="xxH-uU-z7r" firstAttribute="leading" secondItem="OXq-hS-LnH" secondAttribute="leading" id="GIC-ty-daO"/>
@@ -86,7 +84,7 @@
                                             <outlet property="ImageView" destination="NOZ-Zf-igx" id="ms1-PA-5Um"/>
                                             <outlet property="Label1" destination="OXq-hS-LnH" id="SSg-Ex-U7U"/>
                                             <outlet property="Label2" destination="xxH-uU-z7r" id="uVK-fX-i6X"/>
-                                            <outlet property="image2" destination="F5q-8V-Jyo" id="uJ3-Qn-hTQ"/>
+                                            <outlet property="iconimage1" destination="Stj-AS-bYq" id="vff-rQ-0X4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -124,29 +122,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBL-Fi-XMa">
-                                <rect key="frame" x="63.000000000000014" y="395.66666666666669" width="218.33333333333337" height="60.666666666666686"/>
+                                <rect key="frame" x="63" y="395.66666666666669" width="272" height="60.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wvn-uk-CjR">
-                                <rect key="frame" x="10" y="122.99999999999999" width="360" height="226.66666666666663"/>
+                                <rect key="frame" x="10" y="122.99999999999999" width="413.66666666666669" height="226.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="226.66666666666663" id="RD4-gi-9jX"/>
                                     <constraint firstAttribute="width" constant="360" id="w3v-Y8-7UR"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDU-Pa-qs4">
-                                <rect key="frame" x="296" y="140" width="52" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
-                                <connections>
-                                    <action selector="YellowButton:" destination="JB2-wV-E07" eventType="touchUpInside" id="7c6-4i-3Hk"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-rO-8Sx">
-                                <rect key="frame" x="63" y="466.66666666666669" width="165" height="71.666666666666686"/>
+                                <rect key="frame" x="62.999999999999986" y="466.66666666666669" width="218.66666666666663" height="71.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="4kd-wq-EPH"/>
                                 </constraints>
@@ -154,6 +143,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="BaZ-wO-wz9">
+                                <rect key="frame" x="267" y="92" width="22" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d5U-j6-S3L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -176,9 +169,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="HeU-Tz-Alr"/>
                     <connections>
-                        <outlet property="Image2" destination="Wvn-uk-CjR" id="rN6-CM-qyo"/>
+                        <outlet property="Image2" destination="Wvn-uk-CjR" id="M7H-c2-SL5"/>
                         <outlet property="Label3" destination="JBL-Fi-XMa" id="NJd-D5-pX1"/>
                         <outlet property="Label4" destination="gvI-rO-8Sx" id="ogn-yz-DP5"/>
+                        <outlet property="iconimage2" destination="BaZ-wO-wz9" id="wco-Ne-iuI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1y-eb-xhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,7 +200,8 @@
     </scenes>
     <resources>
         <image name="benchmark-0.png" width="568" height="291"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="placeholder" width="80" height="60"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -217,13 +212,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
