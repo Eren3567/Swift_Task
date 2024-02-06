@@ -14,6 +14,8 @@ class ViewController: UIViewController {
    var getname = ""
     var gettitlename = ""
     var getimage = ""
+    
+    let iconImageNames = ["star_3794158"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -97,6 +99,13 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         let booksList = books[indexPath.row]
         cell.Label1.text = booksList.artistName
         cell.Label2.text = booksList.name
+        if indexPath.row < iconImageNames.count {
+            cell.iconimage1.image = UIImage(named: iconImageNames[indexPath.row])
+        } else {
+            // indexPath.row, iconImageNames dizisinin sınırlarının dışında olduğu için bir hata meydana geldi
+            //hata mesajı yazdırıldı veya varsayılan bir resim atandı
+            print("Error: Index out of range for iconImageNames array")
+        }
         
         // Download image from Url and assing to cell
         getimage = booksList.artworkUrl100
@@ -122,7 +131,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         getimage = booksList.artworkUrl100
         
         
-        performSegue(withIdentifier: "vc", sender: nil)
+        performSegue(withIdentifier: "vc", sender: books)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -131,16 +140,15 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
                 // pass the data to ViewController2
                 destination.name = getname
                 destination.titlename = gettitlename
-                
+                destination.iconImageNames = iconImageNames
+                destination.imageimage = getimage
                 // create the UIImage from getimage
                 
-                if let imageURL = URL(string: getimage),
-                   let imageData = try? Data(contentsOf: imageURL),
-                   let image = UIImage(data: imageData) {
-                    destination.imageimage = image
-                } else {
-                    print("Failed to load image from URL: \(getimage)")
-                }
+              
+                    
+                    
+                    
+                
             }
         }
         
