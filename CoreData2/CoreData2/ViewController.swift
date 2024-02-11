@@ -17,9 +17,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    save()
-        readData()
+   // save()
+       // readData()
         //deleteData()
+       // sortData()
+        filterData()
     }
 
     func save (){
@@ -77,6 +79,27 @@ class ViewController: UIViewController {
             print(p.name!)
         }
     }
+    
+    func filterData (){
+        
+        let fetchRequest: NSFetchRequest<Person_1> = Person_1.fetchRequest()
+        
+        fetchRequest.predicate = NSPredicate(format: "age == %i and name == %@ ", 20, "name1")
+        
+        do { personList = try context1.fetch(fetchRequest)
+            
+        }
+        catch{ print("error")
+            
+           
+        }
+        for p in personList {
+            
+           print(p.age)
+            print(p.name!)
+        }
+    }
+    
     
 }
 
