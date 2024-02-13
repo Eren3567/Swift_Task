@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         //deleteData()
        // sortData()
         filterData()
+        
     }
 
     func save (){
@@ -31,10 +32,8 @@ class ViewController: UIViewController {
         p.age = 20
         p.name = "name3"
         
-        //appDelegate.saveContext()
-       // readData()
-        //deleteData()
-        sortData()
+        appDelegate.saveContext()
+        
     }
     
     func readData() {
