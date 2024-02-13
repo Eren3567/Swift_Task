@@ -3,4 +3,85 @@
    uuid = "9A7A0D60-89BD-4B91-B355-05F361652137"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08F7F01A-49AB-474C-AF2C-5576A4B6FAE4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ContactAppWithCoreData/ViewControllerAdd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "AddButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D075A75-12CB-4599-9DB9-E1F887299D0D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ContactAppWithCoreData/ViewControllerAdd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "AddButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9D075A75-12CB-4599-9DB9-E1F887299D0D - 13a8faa6a8f1dffe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactAppWithCoreData.ViewControllerAdd.AddButton(Any) -&gt; ()"
+                  moduleName = "ContactAppWithCoreData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erencetintas/Documents/GitHub/Swift_Task/ContactAppWithCoreData/ContactAppWithCoreData/ViewControllerAdd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "9D075A75-12CB-4599-9DB9-E1F887299D0D - 13a8faa6a8f1dffe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactAppWithCoreData.ViewControllerAdd.AddButton(Any) -&gt; ()"
+                  moduleName = "ContactAppWithCoreData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erencetintas/Documents/GitHub/Swift_Task/ContactAppWithCoreData/ContactAppWithCoreData/ViewControllerAdd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "9D075A75-12CB-4599-9DB9-E1F887299D0D - 13a8faa6a8f1dfdf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ContactAppWithCoreData.ViewControllerAdd.AddButton(Any) -&gt; ()"
+                  moduleName = "ContactAppWithCoreData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erencetintas/Documents/GitHub/Swift_Task/ContactAppWithCoreData/ContactAppWithCoreData/ViewControllerAdd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
