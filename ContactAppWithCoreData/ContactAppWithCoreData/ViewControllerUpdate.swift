@@ -8,13 +8,15 @@
 import UIKit
 
 class ViewControllerUpdate: UIViewController {
-
+    let context1 = appdelegate.persistentContainer.viewContext
+    var kisi  : Contacts?
     @IBOutlet weak var ContactNumberUpdate: UITextField!
     @IBOutlet weak var ContactNameUpdate: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ContactNameUpdate.text = kisi?.phoneName
+        ContactNumberUpdate.text = kisi?.phoneNumber2
     }
     
 
