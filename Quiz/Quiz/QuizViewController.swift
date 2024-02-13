@@ -28,33 +28,37 @@ class QuizViewController: UIViewController {
     var questions: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        newFetchQuestion ()
         // Kullanıcı oturum açtıysa Firestore'a kullanıcı kimliğini ekle ve doğru cevabı al
         if let userID = Auth.auth().currentUser?.uid {
             addUserIDToFirestore(userID: userID)
-            fetchCorrect(forUserID: userID)
+           // fetchCorrect(forUserID: userID)
         } else {
             print("Oturum açmış bir kullanıcı yok.")
         }
         
-        fetchDocumentsQuestions1()
-        fetchDocumentsAnswers1()
+        //fetchDocumentsQuestions1()
+       // fetchDocumentsAnswers1()
+        
         
         // Her UILabel'a bir UITapGestureRecognizer ekle
-        // Her UILabel'a bir UITapGestureRecognizer ekle
+        // UITapGestureRecognizer'ları cevap etiketlerine ekle
         AnswerA.isUserInteractionEnabled = true
-        let tapGestureA = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
-        AnswerA.addGestureRecognizer(tapGestureA)
-        AnswerB.isUserInteractionEnabled = true
-        let tapGestureB = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
-        AnswerB.addGestureRecognizer(tapGestureB)
-        AnswerC.isUserInteractionEnabled = true
-        let tapGestureC = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
-        AnswerC.addGestureRecognizer(tapGestureC)
-        
-        AnswerD.isUserInteractionEnabled = true
-        let tapGestureD = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
-        AnswerD.addGestureRecognizer(tapGestureD)
-        
+         AnswerB.isUserInteractionEnabled = true
+         AnswerC.isUserInteractionEnabled = true
+         AnswerD.isUserInteractionEnabled = true
+         
+         AnswerA.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(answerTapped)))
+         AnswerB.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(answerTapped)))
+         AnswerC.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(answerTapped)))
+         AnswerD.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(answerTapped)))
+         
+         // Cevap etiketlerinin arka plan rengini sıfırla
+         AnswerA.backgroundColor = .clear
+         AnswerB.backgroundColor = .clear
+         AnswerC.backgroundColor = .clear
+         AnswerD.backgroundColor = .clear
     }
     
     
@@ -121,7 +125,7 @@ class QuizViewController: UIViewController {
         }
     }
     
-    
+   /*
     func fetchCorrect(forUserID userID: String) {
         let db = Firestore.firestore()
         
@@ -135,16 +139,17 @@ class QuizViewController: UIViewController {
             if let querySnapshot = querySnapshot {
                 for document in querySnapshot.documents {
                     let data = document.data()
-                    // Belge verilerini işleyin
+                    
                     
                     let correct = data["Correct1"] as? String
                     self.correctAnswer = correct
-                    // İşlenen verileri kullanın veya başka bir işlem yapın
+                   
                     print(correct!)
                 }
             }
         }
     }
+    */
     func fetchDocumentsQuestions1() {
         db.collection("Question").getDocuments { (querySnapshot, error) in
             if let error = error {
@@ -176,7 +181,7 @@ class QuizViewController: UIViewController {
     func addUserIDToFirestore(userID: String) {
         let db = Firestore.firestore()
         
-        // Firestore'da "users" koleksiyonu altına yeni bir belge oluştur
+        
         let userDocRef = db.collection("users").document(userID)
         
         // Belgeyi oluştur veya güncelle
@@ -190,24 +195,31 @@ class QuizViewController: UIViewController {
     }
     
     
-    @objc func labelTapped(_ sender: UITapGestureRecognizer) {
-        fetchCorrect(forUserID: userID!)
-        
-        
+    @objc func answerTapped(_ sender: UITapGestureRecognizer) {
         guard let label = sender.view as? UILabel else { return }
         
+        // Seçilen cevabı al
+        let selectedAnswer = label.text ?? ""
+        
         // Doğru cevabı kontrol et
-        if label.text == correctAnswer {
+        if selectedAnswer == correctAnswer {
             // Doğru cevap ise ilgili UILabel'ı yeşil yap
             label.backgroundColor = .green
-            updateScore(points: 5)
+            
+            // 1 saniye sonra bir sonraki soruya geç
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                // Yeşil rengi temizle
+                label.backgroundColor = .clear
+                
+                // Bir sonraki belgeye geçiş işlemi
+                self.fetchNextDocument()
+            }
         } else {
-            // Yanlış cevap ise ilgili UILabel'ı kırmızı yap (isteğe bağlı)
+            // Yanlış cevap ise ilgili UILabel'ı kırmızı yap
             label.backgroundColor = .red
         }
-        print("gesture")
     }
-    
+
     // score calculate
     func updateScore(points: Int) {
         
@@ -220,7 +232,7 @@ class QuizViewController: UIViewController {
     @IBAction func NextQuestionButton(_ sender: Any) {
         currentQuestionIndex += 1
                 
-                // currentQuestionIndex değerine göre bir sonraki soruyu göster
+        
                 switch currentQuestionIndex {
                 case 1:
                     fetchDocumentsQuestions2()
@@ -232,6 +244,11 @@ class QuizViewController: UIViewController {
                 }
             
 
+    }
+    
+    func fetchNextDocument() {
+      
+        newFetchQuestion()
     }
     
     func fetchDocumentsQuestions2() {
@@ -260,6 +277,53 @@ class QuizViewController: UIViewController {
         }
     }
 
+    
+    func newFetchQuestion () {
+        
+        db.collection("Question").getDocuments { (querySnapshot, error) in
+                       if let error = error {
+                           print("Error getting documents: \(error.localizedDescription)")
+                       } else {
+                           for document in querySnapshot!.documents {
+                               let data = document.data()
+                               let questionText = data["questionText"] as? String ?? ""
+                               let answers = data["answers"] as? [String] ?? []
+                               let correctAnswer = data["correctAnswer"] as? String ?? ""
+
+                               DispatchQueue.main.async {
+                                   self.QuestionLabel.text = questionText
+                               }
+
+                               // Cevapları uygun UILabel'lara atama
+                               if answers.count >= 4 {
+                                   DispatchQueue.main.async {
+                                       self.AnswerA.text = answers[0]
+                                       self.AnswerB.text = answers[1]
+                                       self.AnswerC.text = answers[2]
+                                       self.AnswerD.text = answers[3]
+                                   }
+                                   
+                                   // Doğru cevabı al
+                                   self.correctAnswer = correctAnswer
+                                   print("Doğru cevap: \(correctAnswer)") // Doğru cevabı yazdır
+                                   
+                               } else {
+                                   print("Sorunun cevapları eksik veya hatalı.")
+                               }
+
+                            
+                            
+                           }
+                       }
+                   }
+               
+               
+        
+        
+        
+    }
+    
+    
     func fetchDocumentsQuestions3() {
         db.collection("Question").getDocuments { (querySnapshot, error) in
             if let error = error {
