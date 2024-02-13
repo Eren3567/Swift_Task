@@ -86,6 +86,7 @@
 		7A7090B72B76B95F00C54C52 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A7090B62B76B95F00C54C52 /* FirebaseRemoteConfigSwift */; };
 		7A7090B92B76B95F00C54C52 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7A7090B82B76B95F00C54C52 /* FirebaseStorage */; };
 		7A7090BB2B76B95F00C54C52 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7A7090BA2B76B95F00C54C52 /* FirebaseStorageCombine-Community */; };
+		7A9F64072B7A969D007A9382 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F64062B7A969D007A9382 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,7 @@
 		7A7090222B768C3C00C54C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A7090282B76A1D500C54C52 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		7A70902A2B76A56400C54C52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A9F64062B7A969D007A9382 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				7A7090142B768C3B00C54C52 /* AppDelegate.swift */,
 				7A7090162B768C3B00C54C52 /* SceneDelegate.swift */,
 				7A7090182B768C3B00C54C52 /* ViewController.swift */,
+				7A9F64062B7A969D007A9382 /* File.swift */,
 				7A7090282B76A1D500C54C52 /* QuizViewController.swift */,
 				7A70901A2B768C3B00C54C52 /* Main.storyboard */,
 				7A70901D2B768C3C00C54C52 /* Assets.xcassets */,
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9F64072B7A969D007A9382 /* File.swift in Sources */,
 				7A7090192B768C3B00C54C52 /* ViewController.swift in Sources */,
 				7A7090152B768C3B00C54C52 /* AppDelegate.swift in Sources */,
 				7A7090172B768C3B00C54C52 /* SceneDelegate.swift in Sources */,
