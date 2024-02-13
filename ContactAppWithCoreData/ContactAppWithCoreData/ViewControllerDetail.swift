@@ -8,13 +8,15 @@
 import UIKit
 
 class ViewControllerDetail: UIViewController {
-
+    let context1 = appdelegate.persistentContainer.viewContext
+    var kisi : Contacts?
     @IBOutlet weak var Label2: UILabel!
     @IBOutlet weak var Label1: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        Label2.text = kisi?.phoneNumber2
+        Label1.text = kisi?.phoneName
     }
     
 
