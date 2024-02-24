@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 var collectionImages = [Collection]()
 
-let k = Collection(collectionImage: "kpss", enterCollection: "k")
+
 
 
 class ViewControllerScore: UIViewController {
@@ -23,12 +23,24 @@ class ViewControllerScore: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+                  
+                  // Arka plan görüntüsünü ayarlayın
+                  backgroundImage.image = UIImage(named: "main2")
+                  
+                  // Görüntünün arka planda görünmesini sağlayın
+                  backgroundImage.contentMode = .scaleAspectFill
+                  
+                  // Görüntüyü arka plana ekleyin
+                  self.view.insertSubview(backgroundImage, at: 0)
+            
             fetchScoresFromFirestore()
             Table.delegate = self
             Table.dataSource = self
             //collecttion.delegate = self
    // collecttion.dataSource = self
-            collectionImages.append(k)
+           
 
      }
     func fetchScoresFromFirestore() {
