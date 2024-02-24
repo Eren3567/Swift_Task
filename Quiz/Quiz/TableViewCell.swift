@@ -9,13 +9,15 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var username: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var username: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
+            
+              
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
