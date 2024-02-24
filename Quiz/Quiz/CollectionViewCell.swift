@@ -9,6 +9,8 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
+ 
+    
     @IBOutlet weak var question2023Image: UIImageView!
     
     
