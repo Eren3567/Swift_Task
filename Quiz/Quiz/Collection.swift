@@ -10,13 +10,11 @@ struct Collection {
     
     let collectionImage :String?
     
-    let enterCollection :String?
+  
     
-    init(collectionImage: String?, enterCollection: String?) {
+    init(collectionImage: String?) {
         self.collectionImage = collectionImage
-        self.enterCollection = enterCollection
     }
- 
 
     
 }
