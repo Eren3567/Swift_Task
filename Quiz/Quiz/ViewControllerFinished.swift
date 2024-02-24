@@ -6,28 +6,41 @@
 //
 
 import UIKit
-
+import Firebase
 class ViewControllerFinished: UIViewController {
-
+var receivedScore = ""
     @IBOutlet weak var finishedLabel: UILabel!
     @IBOutlet weak var finishedImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        finishedLabel.text = receivedScore
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+              
+              // Arka plan görüntüsünü ayarlayın
+              backgroundImage.image = UIImage(named: "main2")
+              
+              // Görüntünün arka planda görünmesini sağlayın
+              backgroundImage.contentMode = .scaleAspectFill
+              
+              // Görüntüyü arka plana ekleyin
+              self.view.insertSubview(backgroundImage, at: 0)
     }
     
     @IBAction func completeLabel(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "toBackMain", sender: nil)
+        }
+        
+        catch{
+           print("Hatalı")
+        }
+        
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    
+   
 
-}
