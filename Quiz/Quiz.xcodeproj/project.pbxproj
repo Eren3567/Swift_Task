@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7A0D4F182B89EEE30071DF07 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D4F172B89EEE30071DF07 /* CollectionViewCell.swift */; };
 		7A0D4F1A2B8A58C20071DF07 /* ViewControllerCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D4F192B8A58C20071DF07 /* ViewControllerCollection.swift */; };
+		7A0D4F1C2B8AA9800071DF07 /* TrueAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D4F1B2B8AA9800071DF07 /* TrueAnswer.mp3 */; };
+		7A0D4F1E2B8AAAA40071DF07 /* WrongAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D4F1D2B8AAAA40071DF07 /* WrongAnswer.mp3 */; };
 		7A7090152B768C3B00C54C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7090142B768C3B00C54C52 /* AppDelegate.swift */; };
 		7A7090172B768C3B00C54C52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7090162B768C3B00C54C52 /* SceneDelegate.swift */; };
 		7A7090192B768C3B00C54C52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7090182B768C3B00C54C52 /* ViewController.swift */; };
@@ -99,6 +101,8 @@
 /* Begin PBXFileReference section */
 		7A0D4F172B89EEE30071DF07 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		7A0D4F192B8A58C20071DF07 /* ViewControllerCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCollection.swift; sourceTree = "<group>"; };
+		7A0D4F1B2B8AA9800071DF07 /* TrueAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TrueAnswer.mp3; sourceTree = "<group>"; };
+		7A0D4F1D2B8AAAA40071DF07 /* WrongAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WrongAnswer.mp3; sourceTree = "<group>"; };
 		7A7090112B768C3B00C54C52 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7090142B768C3B00C54C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A7090162B768C3B00C54C52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 				7A9F64062B7A969D007A9382 /* File.swift */,
 				7A70901A2B768C3B00C54C52 /* Main.storyboard */,
 				7A7090282B76A1D500C54C52 /* QuizViewController.swift */,
+				7A0D4F1B2B8AA9800071DF07 /* TrueAnswer.mp3 */,
+				7A0D4F1D2B8AAAA40071DF07 /* WrongAnswer.mp3 */,
 				7A70901D2B768C3C00C54C52 /* Assets.xcassets */,
 				7A70901F2B768C3C00C54C52 /* LaunchScreen.storyboard */,
 				7A7090222B768C3C00C54C52 /* Info.plist */,
@@ -377,7 +383,9 @@
 				7A7090212B768C3C00C54C52 /* LaunchScreen.storyboard in Resources */,
 				7A70902B2B76A56400C54C52 /* GoogleService-Info.plist in Resources */,
 				7A70901E2B768C3C00C54C52 /* Assets.xcassets in Resources */,
+				7A0D4F1C2B8AA9800071DF07 /* TrueAnswer.mp3 in Resources */,
 				7A70901C2B768C3B00C54C52 /* Main.storyboard in Resources */,
+				7A0D4F1E2B8AAAA40071DF07 /* WrongAnswer.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
