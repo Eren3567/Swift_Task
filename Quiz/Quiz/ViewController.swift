@@ -23,23 +23,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+              
+              // Arka plan görüntüsünü ayarlayın
+              backgroundImage.image = UIImage(named: "main")
+              
+              // Görüntünün arka planda görünmesini sağlayın
+              backgroundImage.contentMode = .scaleAspectFill
+              
+              // Görüntüyü arka plana ekleyin
+              self.view.insertSubview(backgroundImage, at: 0)
+        
     }
     
     @IBAction func LoginButton(_ sender: Any) {
         guard let email = emailText.text, !email.isEmpty,
-                     let password = passwordText.text, !password.isEmpty else {
-                   // E-posta veya parola alanları boşsa hata mesajı göster
-                   errorMessage(title: "Error", message: "Please enter email and password")
-                   return
-               }
-               
-               // Kullanıcı adı alanı doluysa, Firestore'dan kullanıcı adını alıp kontrol et
-               if let username = usernameText.text, !username.isEmpty {
-                   checkUsernameAndSignIn(email: email, password: password, username: username)
-               } else {
-                   // Kullanıcı adı alanı boşsa hata mesajı göster
-                   errorMessage(title: "Error", message: "Please enter username")
-               }
+                      let password = passwordText.text, !password.isEmpty else {
+                // E-posta veya parola alanları boşsa hata mesajı göster
+                errorMessage(title: "Error", message: "Please enter email and password")
+                return
+            }
+            
+            // Kullanıcı adı alanı doluysa, Firestore'dan kullanıcı adını alıp kontrol et
+            if let username = usernameText.text, !username.isEmpty {
+                signIn(email: email, password: password)
+            } else {
+                // Kullanıcı adı alanı boşsa hata mesajı göster
+                errorMessage(title: "Error", message: "Please enter username")
+            }
     }
     
     func checkUsernameAndSignIn(email: String, password: String, username: String) {
