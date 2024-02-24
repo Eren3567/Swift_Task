@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import AVFAudio
 class QuizViewController: UIViewController {
     var documentIDs: [String] = []
     var documentId = ""
@@ -33,8 +34,22 @@ class QuizViewController: UIViewController {
     var allQuestionsAnswered = false
     var idDocument = [QueryDocumentSnapshot]()
     var usedDocumentIDs: [String] = []
+    var correctSoundPlayer: AVAudioPlayer?
+    var wrongSoundPlayer: AVAudioPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+              
+              // Arka plan görüntüsünü ayarlayın
+              backgroundImage.image = UIImage(named: "Sorular")
+              
+              // Görüntünün arka planda görünmesini sağlayın
+              backgroundImage.contentMode = .scaleAspectFill
+              
+              // Görüntüyü arka plana ekleyin
+              self.view.insertSubview(backgroundImage, at: 0)
+        loadSounds()
         fetchDocumentIDs()
         
         newFetchQuestion ()
@@ -110,7 +125,7 @@ class QuizViewController: UIViewController {
         
         if selectedAnswer == correctAnswer {
             label.backgroundColor = .green
-            
+            correctSoundPlayer?.play()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
                 label.backgroundColor = .clear
                 
@@ -118,13 +133,17 @@ class QuizViewController: UIViewController {
                 updateScore()
                 
                 if allQuestionsAnswered {
-                    performSegue(withIdentifier: "toFinished", sender: nil)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                                self.performSegue(withIdentifier: "toFinished", sender: nil)
+                            }
+                    
                 }
             }
         } else {
             label.backgroundColor = .red
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
                 updateScore2()
+                wrongSoundPlayer?.play()
                 label.backgroundColor = .clear
             }
         }
@@ -290,6 +309,34 @@ class QuizViewController: UIViewController {
  
     }
     
-    
-    
+    // Segue hazırlığı
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "toFinished" {
+                if let destinationVC = segue.destination as? ViewControllerFinished {
+                    // receivedScore değerini hedef sayfaya aktar
+                    destinationVC.receivedScore = "Tebrikler puanınız:\(self.currentScore)"
+                }
+            }
+        }
+    func loadSounds() {
+            // Doğru cevap sesini yükleme
+            if let correctSoundPath = Bundle.main.path(forResource: "TrueAnswer", ofType: "mp3") {
+                let url = URL(fileURLWithPath: correctSoundPath)
+                do {
+                    correctSoundPlayer = try AVAudioPlayer(contentsOf: url)
+                } catch {
+                    print("Error loading correct sound file: \(error.localizedDescription)")
+                }
+            }
+            
+            // Yanlış cevap sesini yükleme
+            if let wrongSoundPath = Bundle.main.path(forResource: "WrongAnswer", ofType: "mp3") {
+                let url = URL(fileURLWithPath: wrongSoundPath)
+                do {
+                    wrongSoundPlayer = try AVAudioPlayer(contentsOf: url)
+                } catch {
+                    print("Error loading wrong sound file: \(error.localizedDescription)")
+                }
+            }
+        }
 }
