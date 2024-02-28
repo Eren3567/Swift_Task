@@ -25,13 +25,13 @@ class ViewController: UIViewController {
         
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
-              // Arka plan görüntüsünü ayarlayın
+              // Arka plan görüntüsünü ayarlar
               backgroundImage.image = UIImage(named: "main")
               
-              // Görüntünün arka planda görünmesini sağlayın
+              // Görüntünün arka planda görünmesini sağlar
               backgroundImage.contentMode = .scaleAspectFill
               
-              // Görüntüyü arka plana ekleyin
+              // Görüntüyü arka plana ekler
               self.view.insertSubview(backgroundImage, at: 0)
         
     }
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             if let username = usernameText.text, !username.isEmpty {
                 signIn(email: email, password: password)
             } else {
-                // Kullanıcı adı alanı boşsa hata mesajı göster
+                // Kullanıcı adı alanı boşsa hata mesajı gösterir
                 errorMessage(title: "Error", message: "Please enter username")
             }
     }
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
             return
         }
         
-        // Firestore'dan kullanıcı adını al
+        // Firestore'dan kullanıcı adını alır
         db.collection("users").document(currentUser.uid).getDocument { (document, error) in
             if let error = error {
                 print("Error fetching username from Firestore: \(error.localizedDescription)")
@@ -68,17 +68,17 @@ class ViewController: UIViewController {
             }
             
             if let document = document, document.exists {
-                // Firestore'da kullanıcı adı varsa ve giriş yapılan kullanıcı adıyla eşleşiyorsa giriş yap
+                // Firestore'da kullanıcı adı varsa ve giriş yapılan kullanıcı adıyla eşleşiyorsa giriş yapar
                 let userData = document.data()
                 let fetchedUsername = userData?["username"] as? String ?? ""
                 if fetchedUsername == username {
                     self.signIn(email: email, password: password)
                 } else {
-                    // Firestore'daki kullanıcı adı giriş yapılan kullanıcı adıyla eşleşmiyorsa hata mesajı göster
+                    // Firestore'daki kullanıcı adı giriş yapılan kullanıcı adıyla eşleşmiyorsa hata mesajı gösterir
                     self.errorMessage(title: "Error", message: "Username does not match")
                 }
             } else {
-                // Firestore'da kullanıcı adı bulunamazsa hata mesajı göster
+                // Firestore'da kullanıcı adı bulunamazsa hata mesajı gösterir
                 self.errorMessage(title: "Error", message: "Username not found")
             }
         }
@@ -103,23 +103,23 @@ class ViewController: UIViewController {
                 return
             }
             
-            // Kullanıcı adının geçerli olup olmadığını kontrol et
+            // Kullanıcı adının geçerli olup olmadığını kontrol eder
             if !isValidUsername(username) {
                 errorMessage(title: "Error", message: "Invalid username format")
                 return
             }
             
         
-            // E-posta ve parola alanları doluysa kullanıcıyı kaydet
+            // E-posta ve parola alanları doluysa kullanıcıyı kaydeder
             Auth.auth().createUser(withEmail: email, password: password) { (AuthDataResult, Error) in
                 if let error = Error {
                     // Kullanıcı oluşturma başarısız olduysa hata mesajı göster
                     self.errorMessage(title: "Error", message: error.localizedDescription)
                 } else {
-                    // Kullanıcı başarıyla oluşturulduysa başarılı mesajı göster
+                    // Kullanıcı başarıyla oluşturulduysa başarılı mesajı gösterir
                     self.successMessage(titleinput: "Success", messageinput: "You have successfully registered.")
                     
-                    // Text alanlarını temizle
+                    // Text alanlarını temizler
                     self.emailText.text = ""
                     self.passwordText.text = ""
                     self.usernameText.text = ""
@@ -152,9 +152,8 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     func isValidUsername(_ username: String) -> Bool {
-        // Burada kullanıcı adının geçerli olup olmadığını kontrol edebilirsiniz
-        // Örneğin, istediğiniz doğrulamayı gerçekleştirebilirsiniz
-        // Bu örnekte sadece boş olmamasını kontrol ediyoruz
+        
+        // Bu örnekte sadece boş olmamasını kontrol eder
         return !username.isEmpty
     }
     
