@@ -16,13 +16,13 @@ var receivedScore = ""
         finishedLabel.text = receivedScore
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
-              // Arka plan görüntüsünü ayarlayın
+              // Arka plan görüntüsünü ayarlar
               backgroundImage.image = UIImage(named: "main2")
               
-              // Görüntünün arka planda görünmesini sağlayın
+              // Görüntünün arka planda görünmesini sağlar
               backgroundImage.contentMode = .scaleAspectFill
               
-              // Görüntüyü arka plana ekleyin
+              // Görüntüyü arka plana ekler
               self.view.insertSubview(backgroundImage, at: 0)
     }
     
