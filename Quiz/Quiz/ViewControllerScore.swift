@@ -57,14 +57,14 @@ class ViewControllerScore: UIViewController {
                 }
                 
                 for document in documents {
-                    // Her bir belge içindeki verilere erişin
+                    // Her bir belge içindeki verilere erişir
                     let data = document.data()
                     
                     let userEmail = data["userEmail"] as? String ?? ""
                     let scoreValue = data["score"] as? Int ?? 0
                     let timestamp = data["date"] as? Timestamp ?? Timestamp()
                     
-                    // "user" belgesine erişerek kullanıcı adını alın
+                    // "user" belgesine erişerek kullanıcı adını alırız
                     let userId = data["userID"] as? String ?? ""
                     db.collection("users").document(userId).getDocument { (userDocument, userError) in
                         if let userError = userError {
@@ -75,13 +75,13 @@ class ViewControllerScore: UIViewController {
                         if let userData = userDocument?.data() {
                             let username = userData["username"] as? String ?? ""
                             
-                            // Oluşturulan verilerle bir Score yapısı oluşturun
+                            // Oluşturulan verilerle bir Score yapısı oluşturur
                             let score = Profile(userNameLabel1: userEmail, scoreLabel1: scoreValue, dateLabel1: timestamp, username1: username)
                             
-                            // Daha sonra bu skoru scores dizisine ekleyin veya başka bir işlem yapın
+                            // Daha sonra bu skoru scores dizisine ekleyin veya başka bir işlem yapar
                             self.scores.append(score)
                             
-                            // Firestore'dan çekilen skorlar diziye atandı, TableView'i güncelleyin
+                            // Firestore'dan çekilen skorlar diziye atandı, TableView'i günceller
                             self.Table.reloadData()
                         }
                     }
@@ -118,7 +118,7 @@ extension ViewControllerScore: UITableViewDelegate, UITableViewDataSource {
     func dateToString(timestamp:Timestamp)->String{
         let date = timestamp.dateValue()
 
-        // DateFormatter oluşturun ve istediğiniz tarih biçimini belirleyin
+        // DateFormatter oluşturun ve istediğiniz tarih biçimini belirler
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy" // Tarih biçimini ayarlayın (örneğin, "11 Mar 2023")
 
