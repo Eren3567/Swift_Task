@@ -41,29 +41,29 @@ class QuizViewController: UIViewController {
         
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
-              // Arka plan görüntüsünü ayarlayın
+              // Arka plan görüntüsünü ayarlar
               backgroundImage.image = UIImage(named: "Sorular")
               
-              // Görüntünün arka planda görünmesini sağlayın
+              // Görüntünün arka planda görünmesini sağlar
               backgroundImage.contentMode = .scaleAspectFill
               
-              // Görüntüyü arka plana ekleyin
+              // Görüntüyü arka plana ekler
               self.view.insertSubview(backgroundImage, at: 0)
         loadSounds()
         fetchDocumentIDs()
         
         newFetchQuestion ()
         updateScore3()
-        // Kullanıcının oturum açıp açılmadığını kontrol et
+        // Kullanıcının oturum açıp açılmadığını kontrol eder
         if let _ = Auth.auth().currentUser {
-            // Kullanıcı oturum açık ise skorları kaydet
+            // Kullanıcı oturum açık ise skorları kaydeder
             saveScoreToFirestore()
         }
         
         
         QuestionLabel.adjustsFontSizeToFitWidth = true
         QuestionLabel.minimumScaleFactor = 0.5
-        // Kullanıcı oturum açtıysa Firestore'a kullanıcı kimliğini ekle ve doğru cevabı al
+        // Kullanıcı oturum açtıysa Firestore'a kullanıcı kimliğini ekle ve doğru cevabı alır
         //   if let userID = Auth.auth().currentUser?.uid {
         //      addUserIDToFirestore(userID: userID)
         //      // fetchCorrect(forUserID: userID)
@@ -72,7 +72,7 @@ class QuizViewController: UIViewController {
         //      }
         
         
-        // Her UILabel'a bir UITapGestureRecognizer ekle
+        // Her UILabel'a bir UITapGestureRecognizer ekler
         
         AnswerA.isUserInteractionEnabled = true
         AnswerB.isUserInteractionEnabled = true
@@ -84,7 +84,7 @@ class QuizViewController: UIViewController {
         AnswerC.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(answerTapped)))
         AnswerD.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(answerTapped)))
         
-        // Cevap etiketlerinin arka plan rengini sıfırla
+        // Cevap etiketlerinin arka plan rengini sıfırlar
         AnswerA.backgroundColor = .clear
         AnswerB.backgroundColor = .clear
         AnswerC.backgroundColor = .clear
@@ -116,7 +116,7 @@ class QuizViewController: UIViewController {
     @objc func answerTapped(_ sender: UITapGestureRecognizer) {
         guard let label = sender.view as? UILabel else { return }
         
-        // Tüm sorular yanıtlandıysa işlemi durdur
+        // Tüm sorular yanıtlandıysa işlemi durdurur
         if allQuestionsAnswered {
             return
         }
@@ -159,21 +159,21 @@ class QuizViewController: UIViewController {
         
         
         checkAndSaveScore()
-        ScoreLabel.text = "Correct Answer - Your Score: \(currentScore)" // Skor etiketine güncel puanı yaz
+        ScoreLabel.text = "Correct Answer - Your Score: \(currentScore)" // Skor etiketine güncel puanı yazar
     }
     
     func updateScore2() {
         currentScore -= 2 // Her yanlış cevapta puanı 2 azaltır
         checkAndSaveScore()
-        ScoreLabel.text = "Correct Answer - Your Score: \(currentScore)" // Skor etiketine güncel puanı yaz
+        ScoreLabel.text = "Correct Answer - Your Score: \(currentScore)" // Skor etiketine güncel puanı yazar
     }
     // Başlangıç Skoru
     func updateScore3() {
         currentScore = 0 // Her yanlış cevapta puanı 2 azaltır
-        ScoreLabel.text = "Correct Answer - Your Score: \(currentScore)" // Skor etiketine güncel puanı yaz
+        ScoreLabel.text = "Correct Answer - Your Score: \(currentScore)" // Skor etiketine güncel puanı yazar
     }
     func checkAndSaveScore() {
-        // Tüm soruları yanıtladıysak, skorları Firestore'a kaydet
+        // Tüm soruları yanıtladıysak, skorları Firestore'a kaydeder
         if allQuestionsAnswered {
             saveScoreToFirestore()
         }
@@ -201,7 +201,7 @@ class QuizViewController: UIViewController {
             if let error = error {
                 print("Error getting documents: \(error.localizedDescription)")
             } else {
-                // querySnapshot'taki belgelerin sayısını kontrol et
+                // querySnapshot'taki belgelerin sayısını kontrol eder
                 guard let documents = querySnapshot?.documents else {
                     print("No documents found")
                     return
@@ -213,10 +213,10 @@ class QuizViewController: UIViewController {
                     return
                 }
                 
-                // Belge dizininden belgeyi al
+                // Belge dizininden belgeyi alır
                 let document = documents[currentDocumentIndex]
                 
-                // Belge verilerini işle
+                // Belge verilerini işler
                 let data = document.data()
                 questionText = data["questionLabel"] as? String ?? ""
                 answers = data["answers"] as? [String] ?? []
@@ -281,7 +281,7 @@ class QuizViewController: UIViewController {
         }
     }
     func saveScoreToFirestore() {
-        // Tüm sorular yanıtlandığında skoru Firestore'a kaydet
+        // Tüm sorular yanıtlandığında skoru Firestore'a kaydeder
         if allQuestionsAnswered {
             guard let userID = userID,
                   let userEmail = Auth.auth().currentUser?.email else { return }
@@ -313,13 +313,13 @@ class QuizViewController: UIViewController {
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "toFinished" {
                 if let destinationVC = segue.destination as? ViewControllerFinished {
-                    // receivedScore değerini hedef sayfaya aktar
+                    // receivedScore değerini hedef sayfaya aktarır
                     destinationVC.receivedScore = "Tebrikler puanınız:\(self.currentScore)"
                 }
             }
         }
     func loadSounds() {
-            // Doğru cevap sesini yükleme
+            // Doğru cevap sesini yükleme yapar
             if let correctSoundPath = Bundle.main.path(forResource: "TrueAnswer", ofType: "mp3") {
                 let url = URL(fileURLWithPath: correctSoundPath)
                 do {
@@ -329,7 +329,7 @@ class QuizViewController: UIViewController {
                 }
             }
             
-            // Yanlış cevap sesini yükleme
+            // Yanlış cevap sesini yükleme yapar
             if let wrongSoundPath = Bundle.main.path(forResource: "WrongAnswer", ofType: "mp3") {
                 let url = URL(fileURLWithPath: wrongSoundPath)
                 do {
