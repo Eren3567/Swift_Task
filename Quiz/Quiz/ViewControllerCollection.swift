@@ -21,9 +21,18 @@ class ViewControllerCollection: UIViewController {
         collectionImages.append(k2)
        
         let layout = UICollectionViewFlowLayout()
-          layout.scrollDirection = .horizontal // Yatay kaydırma özelliğini etkinleştirin
+          layout.scrollDirection = .horizontal // Yatay kaydırma özelliğini etkinleştirir
           collectionQuestion.collectionViewLayout = layout
-        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+              
+              // Arka plan görüntüsünü ayarlar
+              backgroundImage.image = UIImage(named: "main3")
+              
+              // Görüntünün arka planda görünmesini sağlar
+              backgroundImage.contentMode = .scaleAspectFill
+              
+              // Görüntüyü arka plana ekler
+              self.view.insertSubview(backgroundImage, at: 0)
         
         collectionQuestion.delegate = self
         collectionQuestion.dataSource = self
@@ -62,7 +71,7 @@ extension ViewControllerCollection: UICollectionViewDelegate,UICollectionViewDat
  }
 extension ViewControllerCollection: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.bounds.size // Hücre boyutu koleksiyonun boyutuna eşit olmalı
+        return collectionView.bounds.size // Hücre boyutu koleksiyonun boyutuna eşit olmalıyı sağlar
     }
     
    
