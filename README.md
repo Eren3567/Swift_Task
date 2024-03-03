@@ -14,7 +14,7 @@ __TECH USED__
     • TableView
     • TableStructure 
 
-[Github Link Here](https://github.com/Eren3567)
+[Github Link Here](https://github.com/Eren3567/Course-First-Repo)
 
 # Food Order App 2 
 
