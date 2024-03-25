@@ -30,15 +30,17 @@ class QuizViewController: UIViewController {
     var currentScore = 0
     var currentQuestionIndex = 0
     var questions: [String] = []
-    var currentDocumentIndex = 0
+    var currentDocumentIndex = -1
     var allQuestionsAnswered = false
-    var idDocument = [QueryDocumentSnapshot]()
+    var idDocument : Int?
     var usedDocumentIDs: [String] = []
     var correctSoundPlayer: AVAudioPlayer?
     var wrongSoundPlayer: AVAudioPlayer?
+    var selectedCollectionName : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchDocumentIDs()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
               // Arka plan görüntüsünü ayarlar
@@ -49,10 +51,24 @@ class QuizViewController: UIViewController {
               
               // Görüntüyü arka plana ekler
               self.view.insertSubview(backgroundImage, at: 0)
-        loadSounds()
-        fetchDocumentIDs()
         
-        newFetchQuestion ()
+        // UILabel'ların köşelerini yuvarlamak için cornerRadius ayarları
+           AnswerA.layer.cornerRadius = 10
+           AnswerA.clipsToBounds = true
+           
+           AnswerB.layer.cornerRadius = 10
+           AnswerB.clipsToBounds = true
+           
+           AnswerC.layer.cornerRadius = 10
+           AnswerC.clipsToBounds = true
+           
+           AnswerD.layer.cornerRadius = 10
+           AnswerD.clipsToBounds = true
+           
+        loadSounds()
+     
+        
+        newFetchQuestion(fromCollections: [selectedCollectionName ?? ""]){}
         updateScore3()
         // Kullanıcının oturum açıp açılmadığını kontrol eder
         if let _ = Auth.auth().currentUser {
@@ -128,8 +144,32 @@ class QuizViewController: UIViewController {
             correctSoundPlayer?.play()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
                 label.backgroundColor = .clear
+                if  selectedCollectionName == "Question" {
+                    fetchNextDocument(fromCollection: selectedCollectionName!)
+                } else if  selectedCollectionName == "QuestionSport1"  {
                 
-                fetchNextDocument()
+                    fetchNextDocument(fromCollection: selectedCollectionName!)
+                    
+                }
+                else if selectedCollectionName == "Question2"  {
+                    
+                    fetchNextDocument(fromCollection: selectedCollectionName!)
+                    
+                }
+                else if selectedCollectionName == "QuestionSport2" {
+                    
+                    fetchNextDocument(fromCollection: selectedCollectionName!)
+                }
+                else if selectedCollectionName == "Question3" {
+                    
+                    fetchNextDocument(fromCollection: selectedCollectionName!)
+                }
+                else if selectedCollectionName == "QuestionSport3" {
+                    
+                    fetchNextDocument(fromCollection: selectedCollectionName!)
+                }
+                print(selectedCollectionName!)
+       
                 updateScore()
                 
                 if allQuestionsAnswered {
@@ -150,7 +190,7 @@ class QuizViewController: UIViewController {
     }
     
     
-    
+   
     
     // score calculate
     func updateScore() {
@@ -159,18 +199,18 @@ class QuizViewController: UIViewController {
         
         
         checkAndSaveScore()
-        ScoreLabel.text = "Correct Answer - Your Score: \(currentScore)" // Skor etiketine güncel puanı yazar
+        ScoreLabel.text = "Doğru Yanıt   Skorun: \(currentScore)" // Skor etiketine güncel puanı yazar
     }
     
     func updateScore2() {
         currentScore -= 2 // Her yanlış cevapta puanı 2 azaltır
         checkAndSaveScore()
-        ScoreLabel.text = "Correct Answer - Your Score: \(currentScore)" // Skor etiketine güncel puanı yazar
+        ScoreLabel.text = "Doğru Yanıt   Skorun: \(currentScore)" // Skor etiketine güncel puanı yazar
     }
     // Başlangıç Skoru
     func updateScore3() {
         currentScore = 0 // Her yanlış cevapta puanı 2 azaltır
-        ScoreLabel.text = "Correct Answer - Your Score: \(currentScore)" // Skor etiketine güncel puanı yazar
+        ScoreLabel.text = "Doğru Yanıt   Skorun: \(currentScore)" // Skor etiketine güncel puanı yazar
     }
     func checkAndSaveScore() {
         // Tüm soruları yanıtladıysak, skorları Firestore'a kaydeder
@@ -179,61 +219,71 @@ class QuizViewController: UIViewController {
         }
     }
     
-    func fetchNextDocument() {
-        currentDocumentIndex += 1
-        
-        if currentDocumentIndex >= idDocument.count {
-            allQuestionsAnswered = true // Tüm sorular yanıtlandı
-            return
+    func fetchNextDocument(fromCollection collection: String) {
+        if currentDocumentIndex >= idDocument! - 1 {
+                allQuestionsAnswered = true
+                return
+            }
+            
+            newFetchQuestion(fromCollections: [collection]) {
+                // Veriler işlensin veya diğer işlemler gerçekleştirilsin
+            }
         }
+
         
-        newFetchQuestion()
-    }
-    
-    
-    
-    func newFetchQuestion() {
+        
+        
+    func newFetchQuestion(fromCollections collections: [String], completion: @escaping () -> Void) {
         // Mevcut belgenin index'ini arttır
         currentDocumentIndex += 1
         
-        // Firestore'dan belgeleri alma işlemi
-        db.collection("Question").getDocuments { [self] (querySnapshot, error) in
-            if let error = error {
-                print("Error getting documents: \(error.localizedDescription)")
-            } else {
-                // querySnapshot'taki belgelerin sayısını kontrol eder
-                guard let documents = querySnapshot?.documents else {
-                    print("No documents found")
-                    return
+        // Koleksiyonları sırayla işle
+        for collection in collections {
+            // Firestore'dan belgeleri alma işlemi sağlarız
+            db.collection(collection).getDocuments { [self] (querySnapshot, error) in
+                if let error = error {
+                    print("Error getting documents from collection \(collection): \(error.localizedDescription)")
+                } else {
+                    // querySnapshot'taki belgelerin sayısını kontrol eder
+                    guard let documents = querySnapshot?.documents else {
+                        print("No documents found in collection \(collection)")
+                        return
+                    }
+                    
+                    // Mevcut belge index'i belgelerin sayısından büyükse, işlemi sonlandır
+                    if currentDocumentIndex >= documents.count {
+                        print("Tüm belgeler işlendi")
+                        return
+                    }
+                    
+                    // Set selectedCollectionName here
+                    selectedCollectionName = collection
+                    
+                    // Belge dizininden belgeyi alır
+                    let document = documents[currentDocumentIndex]
+                    
+                    // Belge verilerini işler
+                    let data = document.data()
+                    questionText = data["questionLabel"] as? String ?? ""
+                    answers = data["answers"] as? [String] ?? []
+                    correctAnswer = data["correctAnswer"] as? String ?? ""
+                    
+                    // Label veri atama
+                    fetch()
+                    
+                    // İşlem tamamlandığında tamamlama işlevini çağırır
+                    completion()
                 }
-                
-                // Mevcut belge index'i belgelerin sayısından büyükse, işlemi sonlandır
-                if currentDocumentIndex >= documents.count {
-                    print("Tüm belgeler işlendi")
-                    return
-                }
-                
-                // Belge dizininden belgeyi alır
-                let document = documents[currentDocumentIndex]
-                
-                // Belge verilerini işler
-                let data = document.data()
-                questionText = data["questionLabel"] as? String ?? ""
-                answers = data["answers"] as? [String] ?? []
-                correctAnswer = data["correctAnswer"] as? String ?? ""
-                
-                // Label veri atama
-                atama()
             }
         }
     }
-    
-    
-    func atama() {
+
+      
+    func fetch() {
         DispatchQueue.main.async {
             
             
-            self.QuestionLabel.text = self.questionText
+            self.QuestionLabel?.text = self.questionText
         }
         
         
@@ -243,10 +293,10 @@ class QuizViewController: UIViewController {
                 
                 
                 
-                self.AnswerA.text = self.answers[0]
-                self.AnswerB.text = self.answers[1]
-                self.AnswerC.text = self.answers[2]
-                self.AnswerD.text = self.answers[3]
+                self.AnswerA?.text = self.answers[0]
+                self.AnswerB?.text = self.answers[1]
+                self.AnswerC?.text = self.answers[2]
+                self.AnswerD?.text = self.answers[3]
                 
                 
             }
@@ -261,7 +311,7 @@ class QuizViewController: UIViewController {
     
     
     func fetchDocumentIDs() {
-        db.collection("Question").getDocuments { (querySnapshot, error) in
+        db.collection(selectedCollectionName ?? "Question").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error fetching documents: \(error)")
                 return
@@ -271,7 +321,7 @@ class QuizViewController: UIViewController {
                 print("No documents found")
                 return
             }
-            self.idDocument = documents
+            self.idDocument = documents.count
             
             for document in documents {
                 self.documentId = document.documentID
@@ -309,15 +359,7 @@ class QuizViewController: UIViewController {
  
     }
     
-    // Segue hazırlığı
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "toFinished" {
-                if let destinationVC = segue.destination as? ViewControllerFinished {
-                    // receivedScore değerini hedef sayfaya aktarır
-                    destinationVC.receivedScore = "Tebrikler puanınız:\(self.currentScore)"
-                }
-            }
-        }
+    
     func loadSounds() {
             // Doğru cevap sesini yükleme yapar
             if let correctSoundPath = Bundle.main.path(forResource: "TrueAnswer", ofType: "mp3") {
@@ -339,4 +381,16 @@ class QuizViewController: UIViewController {
                 }
             }
         }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toFinished" {
+            if let finishedVC = segue.destination as? ViewControllerFinished {
+                // Skoru ViewControllerFinished'e aktar
+                finishedVC.receivedScore = "Puanınız: \(currentScore)"
+            }
+        }
+    }
+
 }
