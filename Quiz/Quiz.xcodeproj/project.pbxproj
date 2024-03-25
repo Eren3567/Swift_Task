@@ -11,6 +11,7 @@
 		7A0D4F1A2B8A58C20071DF07 /* ViewControllerCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D4F192B8A58C20071DF07 /* ViewControllerCollection.swift */; };
 		7A0D4F1C2B8AA9800071DF07 /* TrueAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D4F1B2B8AA9800071DF07 /* TrueAnswer.mp3 */; };
 		7A0D4F1E2B8AAAA40071DF07 /* WrongAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D4F1D2B8AAAA40071DF07 /* WrongAnswer.mp3 */; };
+		7A2BF60D2B9B9F64004DBEAB /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2BF60C2B9B9F64004DBEAB /* ViewControllerHome.swift */; };
 		7A7090152B768C3B00C54C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7090142B768C3B00C54C52 /* AppDelegate.swift */; };
 		7A7090172B768C3B00C54C52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7090162B768C3B00C54C52 /* SceneDelegate.swift */; };
 		7A7090192B768C3B00C54C52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7090182B768C3B00C54C52 /* ViewController.swift */; };
@@ -91,7 +92,15 @@
 		7A7090B92B76B95F00C54C52 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7A7090B82B76B95F00C54C52 /* FirebaseStorage */; };
 		7A7090BB2B76B95F00C54C52 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7A7090BA2B76B95F00C54C52 /* FirebaseStorageCombine-Community */; };
 		7A727EAF2B83FD8000DA22D2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A727EAE2B83FD8000DA22D2 /* TableViewCell.swift */; };
+		7A7ABC262B9106BA00C52302 /* ViewControllerProfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7ABC252B9106BA00C52302 /* ViewControllerProfil.swift */; };
+		7A91CC092BA37F6400ED4768 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 7A91CC082BA37F6400ED4768 /* SwiftProtobuf */; };
+		7A91CC0B2BA37F6400ED4768 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7A91CC0A2BA37F6400ED4768 /* SwiftProtobufPluginLibrary */; };
+		7A91CC0D2BA37F6400ED4768 /* protoc-gen-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 7A91CC0C2BA37F6400ED4768 /* protoc-gen-swift */; };
+		7A953F422B93502000537D73 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A953F412B93502000537D73 /* CollectionViewCell2.swift */; };
+		7A953F442B935B4C00537D73 /* Collection2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A953F432B935B4C00537D73 /* Collection2.swift */; };
+		7A953F472B93774300537D73 /* ViewControllerProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A953F462B93774300537D73 /* ViewControllerProfileDetail.swift */; };
 		7A9F64072B7A969D007A9382 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F64062B7A969D007A9382 /* File.swift */; };
+		7AC08EA92B9C939600F5E055 /* ViewControllerAboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08EA82B9C939600F5E055 /* ViewControllerAboutApp.swift */; };
 		7AE5431B2B817E9E000718F9 /* ViewControllerFinished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5431A2B817E9E000718F9 /* ViewControllerFinished.swift */; };
 		7AEF619C2B851C7F00484099 /* ViewControllerScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEF619B2B851C7E00484099 /* ViewControllerScore.swift */; };
 		7AEF619E2B851D9800484099 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEF619D2B851D9800484099 /* Profile.swift */; };
@@ -103,6 +112,7 @@
 		7A0D4F192B8A58C20071DF07 /* ViewControllerCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCollection.swift; sourceTree = "<group>"; };
 		7A0D4F1B2B8AA9800071DF07 /* TrueAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TrueAnswer.mp3; sourceTree = "<group>"; };
 		7A0D4F1D2B8AAAA40071DF07 /* WrongAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WrongAnswer.mp3; sourceTree = "<group>"; };
+		7A2BF60C2B9B9F64004DBEAB /* ViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
 		7A7090112B768C3B00C54C52 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7090142B768C3B00C54C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A7090162B768C3B00C54C52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,7 +124,12 @@
 		7A7090282B76A1D500C54C52 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		7A70902A2B76A56400C54C52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A727EAE2B83FD8000DA22D2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7A7ABC252B9106BA00C52302 /* ViewControllerProfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfil.swift; sourceTree = "<group>"; };
+		7A953F412B93502000537D73 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
+		7A953F432B935B4C00537D73 /* Collection2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection2.swift; sourceTree = "<group>"; };
+		7A953F462B93774300537D73 /* ViewControllerProfileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfileDetail.swift; sourceTree = "<group>"; };
 		7A9F64062B7A969D007A9382 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		7AC08EA82B9C939600F5E055 /* ViewControllerAboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAboutApp.swift; sourceTree = "<group>"; };
 		7AE5431A2B817E9E000718F9 /* ViewControllerFinished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFinished.swift; sourceTree = "<group>"; };
 		7AEF619B2B851C7E00484099 /* ViewControllerScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScore.swift; sourceTree = "<group>"; };
 		7AEF619D2B851D9800484099 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -154,6 +169,7 @@
 				7A7090892B76B95F00C54C52 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				7A7090932B76B95F00C54C52 /* FirebaseAuth in Frameworks */,
 				7A70902E2B76A5C000C54C52 /* FirebaseAnalytics in Frameworks */,
+				7A91CC0D2BA37F6400ED4768 /* protoc-gen-swift in Frameworks */,
 				7A70909F2B76B95F00C54C52 /* FirebaseFirestore in Frameworks */,
 				7A7090492B76AD3A00C54C52 /* FirebaseAuth in Frameworks */,
 				7A7090AD2B76B95F00C54C52 /* FirebaseInstallations in Frameworks */,
@@ -161,6 +177,7 @@
 				7A7090A52B76B95F00C54C52 /* FirebaseFunctions in Frameworks */,
 				7A7090992B76B95F00C54C52 /* FirebaseDatabase in Frameworks */,
 				7A7090592B76B93300C54C52 /* FirebaseAppCheck in Frameworks */,
+				7A91CC092BA37F6400ED4768 /* SwiftProtobuf in Frameworks */,
 				7A7090512B76B93300C54C52 /* FirebaseAnalytics in Frameworks */,
 				7A7090A92B76B95F00C54C52 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				7A70905F2B76B93300C54C52 /* FirebaseAuthCombine-Community in Frameworks */,
@@ -189,6 +206,7 @@
 				7A7090732B76B93300C54C52 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				7A7090952B76B95F00C54C52 /* FirebaseAuthCombine-Community in Frameworks */,
 				7A7090792B76B93300C54C52 /* FirebaseMLModelDownloader in Frameworks */,
+				7A91CC0B2BA37F6400ED4768 /* SwiftProtobufPluginLibrary in Frameworks */,
 				7A70904D2B76AD3A00C54C52 /* FirebaseCrashlytics in Frameworks */,
 				7A7090632B76B93300C54C52 /* FirebaseDatabase in Frameworks */,
 				7A70903B2B76A5E000C54C52 /* SDWebImageMapKit in Frameworks */,
@@ -225,14 +243,20 @@
 				7A7090142B768C3B00C54C52 /* AppDelegate.swift */,
 				7A7090162B768C3B00C54C52 /* SceneDelegate.swift */,
 				7AE5431A2B817E9E000718F9 /* ViewControllerFinished.swift */,
-				7A0D4F172B89EEE30071DF07 /* CollectionViewCell.swift */,
+				7A7ABC252B9106BA00C52302 /* ViewControllerProfil.swift */,
+				7A953F462B93774300537D73 /* ViewControllerProfileDetail.swift */,
 				7A0D4F192B8A58C20071DF07 /* ViewControllerCollection.swift */,
-				7A7090182B768C3B00C54C52 /* ViewController.swift */,
-				7AEF619D2B851D9800484099 /* Profile.swift */,
-				7AEF619B2B851C7E00484099 /* ViewControllerScore.swift */,
-				7A727EAE2B83FD8000DA22D2 /* TableViewCell.swift */,
-				7AEF61A12B85517200484099 /* Collection.swift */,
+				7AC08EA82B9C939600F5E055 /* ViewControllerAboutApp.swift */,
 				7A7090282B76A1D500C54C52 /* QuizViewController.swift */,
+				7A2BF60C2B9B9F64004DBEAB /* ViewControllerHome.swift */,
+				7A7090182B768C3B00C54C52 /* ViewController.swift */,
+				7AEF619B2B851C7E00484099 /* ViewControllerScore.swift */,
+				7A0D4F172B89EEE30071DF07 /* CollectionViewCell.swift */,
+				7A953F412B93502000537D73 /* CollectionViewCell2.swift */,
+				7A727EAE2B83FD8000DA22D2 /* TableViewCell.swift */,
+				7AEF619D2B851D9800484099 /* Profile.swift */,
+				7AEF61A12B85517200484099 /* Collection.swift */,
+				7A953F432B935B4C00537D73 /* Collection2.swift */,
 				7A9F64062B7A969D007A9382 /* File.swift */,
 				7A70901A2B768C3B00C54C52 /* Main.storyboard */,
 				7A0D4F1B2B8AA9800071DF07 /* TrueAnswer.mp3 */,
@@ -333,6 +357,9 @@
 				7A7090B62B76B95F00C54C52 /* FirebaseRemoteConfigSwift */,
 				7A7090B82B76B95F00C54C52 /* FirebaseStorage */,
 				7A7090BA2B76B95F00C54C52 /* FirebaseStorageCombine-Community */,
+				7A91CC082BA37F6400ED4768 /* SwiftProtobuf */,
+				7A91CC0A2BA37F6400ED4768 /* SwiftProtobufPluginLibrary */,
+				7A91CC0C2BA37F6400ED4768 /* protoc-gen-swift */,
 			);
 			productName = Quiz;
 			productReference = 7A7090112B768C3B00C54C52 /* Quiz.app */;
@@ -365,6 +392,7 @@
 			packageReferences = (
 				7A70902C2B76A5C000C54C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				7A7090372B76A5E000C54C52 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				7A91CC072BA37F6400ED4768 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
 			);
 			productRefGroup = 7A7090122B768C3B00C54C52 /* Products */;
 			projectDirPath = "";
@@ -399,13 +427,19 @@
 				7A9F64072B7A969D007A9382 /* File.swift in Sources */,
 				7A7090192B768C3B00C54C52 /* ViewController.swift in Sources */,
 				7A7090152B768C3B00C54C52 /* AppDelegate.swift in Sources */,
+				7A953F422B93502000537D73 /* CollectionViewCell2.swift in Sources */,
+				7AC08EA92B9C939600F5E055 /* ViewControllerAboutApp.swift in Sources */,
+				7A2BF60D2B9B9F64004DBEAB /* ViewControllerHome.swift in Sources */,
 				7A7090172B768C3B00C54C52 /* SceneDelegate.swift in Sources */,
 				7AE5431B2B817E9E000718F9 /* ViewControllerFinished.swift in Sources */,
 				7A727EAF2B83FD8000DA22D2 /* TableViewCell.swift in Sources */,
 				7AEF61A22B85517200484099 /* Collection.swift in Sources */,
 				7A7090292B76A1D500C54C52 /* QuizViewController.swift in Sources */,
+				7A7ABC262B9106BA00C52302 /* ViewControllerProfil.swift in Sources */,
 				7A0D4F1A2B8A58C20071DF07 /* ViewControllerCollection.swift in Sources */,
+				7A953F442B935B4C00537D73 /* Collection2.swift in Sources */,
 				7AEF619E2B851D9800484099 /* Profile.swift in Sources */,
+				7A953F472B93774300537D73 /* ViewControllerProfileDetail.swift in Sources */,
 				7AEF619C2B851C7F00484099 /* ViewControllerScore.swift in Sources */,
 				7A0D4F182B89EEE30071DF07 /* CollectionViewCell.swift in Sources */,
 			);
@@ -557,16 +591,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WKASSZ9CY5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sınavım";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,6 +612,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erencetintas.Quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -586,16 +624,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WKASSZ9CY5;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = WKASSZ9CY5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sınavım";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -604,6 +647,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erencetintas.Quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Quizec;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -648,6 +693,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.18.10;
+			};
+		};
+		7A91CC072BA37F6400ED4768 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.25.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1007,6 +1060,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A70902C2B76A5C000C54C52 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		7A91CC082BA37F6400ED4768 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A91CC072BA37F6400ED4768 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		7A91CC0A2BA37F6400ED4768 /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A91CC072BA37F6400ED4768 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+		7A91CC0C2BA37F6400ED4768 /* protoc-gen-swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A91CC072BA37F6400ED4768 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = "protoc-gen-swift";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
