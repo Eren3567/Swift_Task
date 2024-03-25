@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 class ViewControllerFinished: UIViewController {
 var receivedScore = ""
+    var selectedCollectionName = ""
     @IBOutlet weak var finishedLabel: UILabel!
     @IBOutlet weak var finishedImage: UIImageView!
     override func viewDidLoad() {
@@ -17,7 +18,7 @@ var receivedScore = ""
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
               // Arka plan görüntüsünü ayarlar
-              backgroundImage.image = UIImage(named: "main2")
+              backgroundImage.image = UIImage(named: "Home2")
               
               // Görüntünün arka planda görünmesini sağlar
               backgroundImage.contentMode = .scaleAspectFill
@@ -27,19 +28,19 @@ var receivedScore = ""
     }
     
     @IBAction func completeLabel(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            performSegue(withIdentifier: "toBackMain", sender: nil)
-        }
-        
-        catch{
-           print("Hatalı")
-        }
-        
-    }
-    
 
+            performSegue(withIdentifier: "ToQuestionSelect", sender: nil)
+        }
+     
+
+    
+    @IBAction func nextQuestionLabel(_ sender: Any) {
+        
+       
+        
+        
     }
+}
     
     
    
