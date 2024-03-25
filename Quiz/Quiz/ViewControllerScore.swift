@@ -15,7 +15,7 @@ var collectionImages = [Collection]()
 
 
 class ViewControllerScore: UIViewController {
-  
+    
     var username: String?
    
     @IBOutlet weak var Table: UITableView!
@@ -26,15 +26,14 @@ class ViewControllerScore: UIViewController {
             
             let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
                   
-                  // Arka plan görüntüsünü ayarlayın
-                  backgroundImage.image = UIImage(named: "main2")
+                  // Arka plan görüntüsünü ayarlar
+                  backgroundImage.image = UIImage(named: "Home2")
                   
-                  // Görüntünün arka planda görünmesini sağlayın
+                  // Görüntünün arka planda görünmesini sağlar
                   backgroundImage.contentMode = .scaleAspectFill
                   
-                  // Görüntüyü arka plana ekleyin
+                  // Görüntüyü arka plana ekler
                   self.view.insertSubview(backgroundImage, at: 0)
-            
             fetchScoresFromFirestore()
             Table.delegate = self
             Table.dataSource = self
@@ -44,50 +43,49 @@ class ViewControllerScore: UIViewController {
 
      }
     func fetchScoresFromFirestore() {
-            let db = Firestore.firestore()
-            db.collection("scores").getDocuments { (querySnapshot, error) in
-                if let error = error {
-                    print("Error fetching scores: \(error.localizedDescription)")
-                    return
-                }
+        guard let currentUserID = Auth.auth().currentUser?.uid else {
+            print("Oturum açmış bir kullanıcı yok.")
+            return
+        }
+        
+        let db = Firestore.firestore()
+        db.collection("scores").whereField("userID", isEqualTo: currentUserID).getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error fetching scores: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let documents = querySnapshot?.documents else {
+                print("No scores found")
+                return
+            }
+            
+          
+            for document in documents {
+                let data = document.data()
+                let userEmail = data["userEmail"] as? String ?? ""
+                let scoreValue = data["score"] as? Int ?? 0
+                let timestamp = data["date"] as? Timestamp ?? Timestamp()
+                let userId = data["userID"] as? String ?? ""
                 
-                guard let documents = querySnapshot?.documents else {
-                    print("No scores found")
-                    return
-                }
-                
-                for document in documents {
-                    // Her bir belge içindeki verilere erişir
-                    let data = document.data()
+                db.collection("users").document(userId).getDocument { (userDocument, userError) in
+                    if let userError = userError {
+                        print("Error fetching user: \(userError.localizedDescription)")
+                        return
+                    }
                     
-                    let userEmail = data["userEmail"] as? String ?? ""
-                    let scoreValue = data["score"] as? Int ?? 0
-                    let timestamp = data["date"] as? Timestamp ?? Timestamp()
-                    
-                    // "user" belgesine erişerek kullanıcı adını alırız
-                    let userId = data["userID"] as? String ?? ""
-                    db.collection("users").document(userId).getDocument { (userDocument, userError) in
-                        if let userError = userError {
-                            print("Error fetching user: \(userError.localizedDescription)")
-                            return
-                        }
+                    if let userData = userDocument?.data() {
+                        let username = userData["username"] as? String ?? ""
+                        let score = Profile(userNameLabel1: userEmail, scoreLabel1: scoreValue, dateLabel1: timestamp, username1: username)
+                        self.scores.append(score)
                         
-                        if let userData = userDocument?.data() {
-                            let username = userData["username"] as? String ?? ""
-                            
-                            // Oluşturulan verilerle bir Score yapısı oluşturur
-                            let score = Profile(userNameLabel1: userEmail, scoreLabel1: scoreValue, dateLabel1: timestamp, username1: username)
-                            
-                            // Daha sonra bu skoru scores dizisine ekleyin veya başka bir işlem yapar
-                            self.scores.append(score)
-                            
-                            // Firestore'dan çekilen skorlar diziye atandı, TableView'i günceller
-                            self.Table.reloadData()
-                        }
+                        self.Table.reloadData()
                     }
                 }
             }
         }
+    }
+
 
  }
 
@@ -100,18 +98,18 @@ extension ViewControllerScore: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         let score = scores[indexPath.row]
 
-        if let userEmail = score.userNameLabel1 {
-            cell.userNameLabel.text = "Mail Adresi: \(userEmail)"
-        } else {
-            cell.userNameLabel.text = "Mail Adresi: Bilinmiyor"
-        }
-        cell.scoreLabel.text = "Aldığı Puan:\(String(score.scoreLabel1))"
-        cell.dateLabel.text = "Puanı Aldığı Tarih:\(dateToString(timestamp: score.dateLabel1!))"
-        if let username = score.username1 {
-            cell.username.text = "Kullanıcı Adı: \(username)"
-        } else {
-            cell.username.text = "Kullanıcı Adı: Bilinmiyor"
-        }
+       // if let userEmail = score.userNameLabel1 {
+      //      cell.userNameLabel.text = "Mail Adresi: \(userEmail)"
+       // } else {
+       //     cell.userNameLabel.text = "Mail Adresi: Bilinmiyor"
+       // }
+        cell.scoreLabel.text = "Aldığız Puan:\(String(score.scoreLabel1))"
+        cell.dateLabel.text = "Puanı Aldığınız Tarih:\(dateToString(timestamp: score.dateLabel1!))"
+      //  if let username = score.username1 {
+      //      cell.username.text = "Kullanıcı Adı: \(username)"
+      //  } else {
+      //      cell.username.text = "Kullanıcı Adı: Bilinmiyor"
+     //   }
         return cell
     }
     
