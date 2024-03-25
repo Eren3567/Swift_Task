@@ -33,6 +33,8 @@ class ViewController: UIViewController {
               
               // Görüntüyü arka plana ekler
               self.view.insertSubview(backgroundImage, at: 0)
+        // Şifre metninin görünmez olmasını sağlar
+                passwordText.isSecureTextEntry = true
         
     }
     
