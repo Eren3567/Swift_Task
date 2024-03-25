@@ -6,17 +6,8 @@
 //
 
 import Foundation
-
-struct Question {
-    
-    var questionText : String?
-    var answers = [String]()
-    var correctAnswer : String?
-  
-    init(questionText: String? = nil, answers: [String] = [String](), correctAnswer: String? = nil) {
-        self.questionText = questionText
-        self.answers = answers
-        self.correctAnswer = correctAnswer
-    }
-    
+struct QuestionModel {
+    var questionLabel: String
+    var answers: [String]
+    var correctAnswer: String
 }
