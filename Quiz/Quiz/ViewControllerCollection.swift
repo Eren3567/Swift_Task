@@ -13,9 +13,11 @@ class ViewControllerCollection: UIViewController {
     let k = Collection(collectionImage: "GenelKültür1")
     let k2 = Collection(collectionImage: "GenelKültür2")
     let k3 = Collection(collectionImage: "GenelKültür3")
-    let k4 = Collection2(collectionImage2: "Spor1")
-    let k5 = Collection2(collectionImage2: "Spor2")
-    let k6 = Collection2(collectionImage2: "Spor3")
+    let k4 = Collection(collectionImage: "GenelKültür4")
+    let k5 = Collection2(collectionImage2: "Spor1")
+    let k6 = Collection2(collectionImage2: "Spor2")
+    let k7 = Collection2(collectionImage2: "Spor3")
+    let k8 = Collection2(collectionImage2: "Spor4")
     var idDocument = [QueryDocumentSnapshot]()
     @IBOutlet weak var collectionQuestion: UICollectionView!
     var quizViewController = QuizViewController() // Örnek oluşturur
@@ -44,9 +46,11 @@ class ViewControllerCollection: UIViewController {
         collectionImages.append(k)
         collectionImages.append(k2)
         collectionImages.append(k3)
-        collectionImages2.append(k4)
+        collectionImages.append(k4)
         collectionImages2.append(k5)
         collectionImages2.append(k6)
+        collectionImages2.append(k7)
+        collectionImages2.append(k8)
         if let layout1 = collectionQuestion.collectionViewLayout as? UICollectionViewFlowLayout {
             layout1.scrollDirection = .horizontal
             layout1.minimumInteritemSpacing = 20 // İki resim arasındaki boşluğu ayarlar
@@ -124,7 +128,11 @@ extension ViewControllerCollection: UICollectionViewDelegate,UICollectionViewDat
                 //self.quizViewController.selectedCollectionName = "QuestionSport1"
             }
             
-            
+            else if indexPath.row == 3 {
+                
+                performSegue(withIdentifier: "toQuestions", sender: "Question4")
+                //self.quizViewController.selectedCollectionName = "QuestionSport1"
+            }
             
         } else {
             if indexPath.row == 0 {
@@ -134,6 +142,9 @@ extension ViewControllerCollection: UICollectionViewDelegate,UICollectionViewDat
             }
             else if indexPath.row == 2 {
                 performSegue(withIdentifier: "toQuestions", sender: "QuestionSport3")
+            }
+            else if indexPath.row == 3 {
+                performSegue(withIdentifier: "toQuestions", sender: "QuestionSport4")
             }
         }
         
