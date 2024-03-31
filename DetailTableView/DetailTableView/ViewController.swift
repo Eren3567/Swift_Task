@@ -81,7 +81,20 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource,TableViewCel
         return cell
         
 
-    }//End class
+    }
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (action, view, completionHandler) in
+                // Silme işlemi yapılacak
+                self?.mealList.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                completionHandler(true)
+            }
+            
+            let actions = UISwipeActionsConfiguration(actions: [deleteAction])
+            return actions
+        }//End class
     
     
     
