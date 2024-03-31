@@ -21,13 +21,13 @@ class ViewControllerProfil: UIViewController {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
               // Arka plan görüntüsünü ayarlar
-              backgroundImage.image = UIImage(named: "Home2")
+              backgroundImage.image = UIImage(named: "white")
               
               // Görüntünün arka planda görünmesini sağlar
-              backgroundImage.contentMode = .scaleAspectFill
+             backgroundImage.contentMode = .scaleAspectFill
               
               // Görüntüyü arka plana ekler
-              self.view.insertSubview(backgroundImage, at: 0)
+            self.view.insertSubview(backgroundImage, at: 0)
         fetchUserDetailsFromAuthentication()
         // SınavlarımLabel'a bir UITapGestureRecognizer ekleyerek tıklama algılamasını sağlar
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(sınavlarımLabelTapped))
