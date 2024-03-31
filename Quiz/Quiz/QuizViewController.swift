@@ -160,11 +160,20 @@ class QuizViewController: UIViewController {
                     
                     fetchNextDocument(fromCollection: selectedCollectionName!)
                 }
+                
                 else if selectedCollectionName == "Question3" {
                     
                     fetchNextDocument(fromCollection: selectedCollectionName!)
                 }
                 else if selectedCollectionName == "QuestionSport3" {
+                    
+                    fetchNextDocument(fromCollection: selectedCollectionName!)
+                }
+                else if selectedCollectionName == "Question4" {
+                    
+                    fetchNextDocument(fromCollection: selectedCollectionName!)
+                }
+                else if selectedCollectionName == "QuestionSport4" {
                     
                     fetchNextDocument(fromCollection: selectedCollectionName!)
                 }
