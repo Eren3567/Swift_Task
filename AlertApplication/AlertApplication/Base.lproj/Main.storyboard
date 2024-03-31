@@ -54,6 +54,7 @@
                     </view>
                     <connections>
                         <outlet property="Label" destination="gTI-ne-DtR" id="cLX-cS-VZP"/>
+                        <outlet property="Label2" destination="pmb-A9-pOn" id="iwM-XL-fbh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
