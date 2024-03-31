@@ -124,7 +124,47 @@ extension ViewControllerScore: UITableViewDelegate, UITableViewDataSource {
         let formattedDate = dateFormatter.string(from: date)
         return formattedDate
     }
-}
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { (action, view, completion) in
+            // Firestore'dan ilgili belgeyi sil
+            let db = Firestore.firestore()
+            let score = self.scores[indexPath.row]
+            db.collection("scores").whereField("score", isEqualTo: score.scoreLabel1).whereField("userEmail", isEqualTo: score.userNameLabel1!).getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Error fetching score to delete: \(error.localizedDescription)")
+                    completion(false)
+                    return
+                }
+                
+                guard let document = querySnapshot?.documents.first else {
+                    print("No score found to delete")
+                    completion(false)
+                    return
+                }
+                
+                db.collection("scores").document(document.documentID).delete { error in
+                    if let error = error {
+                        print("Error deleting score: \(error.localizedDescription)")
+                        completion(false)
+                    } else {
+                        print("Score deleted successfully")
+                        // TableView'dan hücreyi sil
+                        self.scores.remove(at: indexPath.row)
+                        tableView.deleteRows(at: [indexPath], with: .automatic)
+                        completion(true)
+                    }
+                }
+            }
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+
+
+ }
+
+
 
 /*extension ViewControllerScore:UICollectionViewDataSource,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
