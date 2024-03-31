@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var Label2: UILabel!
     @IBOutlet weak var Label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
             let getemail = (alertcontroller2.textFields![0] as UITextField).text!
             let getpassword = (alertcontroller2.textFields![1] as UITextField).text!
             
-            self.Label.text = "Email:\(getemail)-Password:\(getpassword)"
+            self.Label2.text = "Email:\(getemail)-Password:\(getpassword)"
         }
         alertcontroller2.addAction(action)
         self.present(alertcontroller2, animated: true, completion: nil)
