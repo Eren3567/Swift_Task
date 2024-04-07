@@ -37,8 +37,7 @@ class ViewControllerScore: UIViewController {
             fetchScoresFromFirestore()
             Table.delegate = self
             Table.dataSource = self
-            //collecttion.delegate = self
-   // collecttion.dataSource = self
+       
            
 
      }
