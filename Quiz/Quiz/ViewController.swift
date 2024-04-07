@@ -37,6 +37,10 @@ class ViewController: UIViewController {
                 passwordText.isSecureTextEntry = true
         
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
     
     @IBAction func LoginButton(_ sender: Any) {
         guard let email = emailText.text, !email.isEmpty,
