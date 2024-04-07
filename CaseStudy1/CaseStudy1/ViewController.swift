@@ -79,7 +79,15 @@ class ViewController: UIViewController {
             // Start request
             task.resume()
         }
+  
+    
+    
+    @IBAction func Favorite(_ sender: Any) {
+        
+        performSegue(withIdentifier: "vcFovarite", sender: nil)
     }
+    
+}
 
     // MARK: - TableView Delegate & DataSource
 
@@ -89,10 +97,21 @@ class ViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! 
+            
+            TableViewCell
             
             let book = isSearching ? filteredBooks[indexPath.row] : books[indexPath.row]
            // let booksList = books[indexPath.row]
+            
+            let favoriteButton = UIButton(type: .custom)
+                let iconImage = UIImage(systemName: "star")
+                favoriteButton.setImage(iconImage, for: .normal)
+                favoriteButton.tintColor = .systemYellow // İsteğe bağlı: Buton rengini ayarlayabilirsiniz
+                favoriteButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30) // Buton boyutunu ayarlayabilirsiniz
+                favoriteButton.addTarget(self, action: #selector(addToFavoritesButtonTapped(_:)), for: .touchUpInside)
+                favoriteButton.tag = indexPath.row // Butona hangi öğenin tıklandığını belirlemek için indeks sırasını saklayın
+                cell.accessoryView = favoriteButton // Hücrenin aksesuar görünümü olarak favori butonunu ayarlayın
             cell.Label1.text = book.artistName
             cell.Label2.text = book.name
             
@@ -109,6 +128,72 @@ class ViewController: UIViewController {
             return cell
         }
         
+        @objc func addToFavoritesButtonTapped(_ sender: UIButton) {
+            // Hangi öğenin favori butonuna tıklandığını alın
+            let index = sender.tag
+            let book = isSearching ? filteredBooks[index] : books[index]
+            
+            // Favori butonunun icon durumunu kontrol edin
+            if sender.currentImage == UIImage(systemName: "star.fill") {
+                // Eğer butonun iconu star.fill ise, bu öğe favorilere eklenmiş demektir
+                // Bu durumda, öğeyi favorilerden kaldırın
+                removeFromFavorites(book: book)
+                
+                // Favori butonunun iconunu star olarak değiştirin
+                sender.setImage(UIImage(systemName: "star"), for: .normal)
+            } else {
+                // Eğer butonun iconu star değilse, bu öğe favorilere eklenmemiş demektir
+                // Bu durumda, öğeyi favorilere ekleyin
+                addToFavorites(book: book)
+                
+                // Favori butonunun iconunu star.fill olarak değiştirin
+                sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            }
+        }
+        func removeFromFavorites(book: Result) {
+            let db = Firestore.firestore()
+            let favoritesCollection = db.collection("favorites")
+            
+            // Favori öğeyi Firestore koleksiyonunda arayın ve belge referansını alın
+            favoritesCollection.whereField("name", isEqualTo: book.name).whereField("artistName", isEqualTo: book.artistName).whereField("artworkUrl100", isEqualTo: book.artworkUrl100).getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Favori kaldırılırken hata oluştu: \(error)")
+                    return
+                }
+                
+                guard let documents = querySnapshot?.documents else {
+                    print("Belge bulunamadı.")
+                    return
+                }
+                
+                // Belge bulunduysa, her bir belgeyi kaldırın
+                for document in documents {
+                    document.reference.delete()
+                }
+                
+                print("Favori başarıyla kaldırıldı.")
+            }
+        }
+
+
+        func addToFavorites(book: Result) {
+            let db = Firestore.firestore()
+            let favoritesCollection = db.collection("favorites")
+
+            let favoriteData = [
+                "artistName": book.artistName,
+                "name": book.name,
+                "artworkUrl100": book.artworkUrl100
+            ]
+
+            favoritesCollection.addDocument(data: favoriteData) { error in
+                if let error = error {
+                    print("Favori eklenirken hata oluştu: \(error)")
+                } else {
+                    print("Favori başarıyla eklendi.")
+                }
+            }
+        }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let book = isSearching ? filteredBooks[indexPath.row] : books[indexPath.row]
            // getname = booksList.name
