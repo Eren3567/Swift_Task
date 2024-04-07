@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A45EDCD2BC2CBF30094CF49 /* FavoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45EDCC2BC2CBF30094CF49 /* FavoriViewController.swift */; };
+		7A45EDCF2BC2D92E0094CF49 /* TableViewCellFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45EDCE2BC2D92E0094CF49 /* TableViewCellFavorite.swift */; };
 		7A6E445E2B6D83AF00C1B25C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E445D2B6D83AF00C1B25C /* AppDelegate.swift */; };
 		7A6E44602B6D83AF00C1B25C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E445F2B6D83AF00C1B25C /* SceneDelegate.swift */; };
 		7A6E44622B6D83AF00C1B25C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E44612B6D83AF00C1B25C /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A45EDCC2BC2CBF30094CF49 /* FavoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriViewController.swift; sourceTree = "<group>"; };
+		7A45EDCE2BC2D92E0094CF49 /* TableViewCellFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellFavorite.swift; sourceTree = "<group>"; };
 		7A6E445A2B6D83AF00C1B25C /* CaseStudy1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseStudy1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6E445D2B6D83AF00C1B25C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A6E445F2B6D83AF00C1B25C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				7A6E445F2B6D83AF00C1B25C /* SceneDelegate.swift */,
 				7A6E44612B6D83AF00C1B25C /* ViewController.swift */,
 				7A6E44AD2B6D885200C1B25C /* TableViewCell.swift */,
+				7A45EDCE2BC2D92E0094CF49 /* TableViewCellFavorite.swift */,
+				7A45EDCC2BC2CBF30094CF49 /* FavoriViewController.swift */,
 				7A6E44B32B6E497000C1B25C /* File.swift */,
 				7A6E44B12B6D8E4D00C1B25C /* ViewController2.swift */,
 				7A6E44AB2B6D879600C1B25C /* BookData.swift */,
@@ -244,10 +250,12 @@
 				7A6E44AE2B6D885200C1B25C /* TableViewCell.swift in Sources */,
 				7A6E44622B6D83AF00C1B25C /* ViewController.swift in Sources */,
 				7A6E44B42B6E497000C1B25C /* File.swift in Sources */,
+				7A45EDCD2BC2CBF30094CF49 /* FavoriViewController.swift in Sources */,
 				7A6E445E2B6D83AF00C1B25C /* AppDelegate.swift in Sources */,
 				7A6E44AC2B6D879600C1B25C /* BookData.swift in Sources */,
 				7A6E44602B6D83AF00C1B25C /* SceneDelegate.swift in Sources */,
 				7A6E44B22B6D8E4D00C1B25C /* ViewController2.swift in Sources */,
+				7A45EDCF2BC2D92E0094CF49 /* TableViewCellFavorite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
