@@ -14,7 +14,8 @@ class TableViewCellFavorite: UITableViewCell {
     @IBOutlet weak var artistNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        artworkImageView.layer.cornerRadius = 10 // veya istediğiniz bir değer
+        artworkImageView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
