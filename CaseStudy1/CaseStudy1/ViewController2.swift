@@ -11,17 +11,24 @@ import FirebaseFirestore
 import FirebaseStorage
 
 class ViewController2: UIViewController {
+    
     var name = ""
     var titlename = ""
     var imageimage = ""
+    var  releasedate = ""
+    var artistURL = ""
     @IBOutlet weak var staryellowlabel: UIButton!
     @IBOutlet weak var labelstarbutton: UILabel!
     //var iconImageNames = "star_3794158"// ViewController'dan alınacak resim adları
     var isYellow = false
     var iconImageNames: [String] = []
+  
+    @IBOutlet weak var Label2: UILabel!
+    @IBOutlet weak var Label1: UILabel!
     @IBOutlet weak var LabelStar: UINavigationItem!
     @IBOutlet weak var iconimage2: UIImageView!
     
+ 
     @IBOutlet weak var Label4: UILabel!
     @IBOutlet weak var Label3: UILabel!
     @IBOutlet weak var Image2: UIImageView!
@@ -29,10 +36,15 @@ class ViewController2: UIViewController {
     let storage = Storage.storage()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         Label3.text = name
         Label4.text = titlename
+        Label1.text = releasedate
+        Label2.text = artistURL
+    
         Image2.image = UIImage(named: imageimage)
-        
+        Image2.layer.cornerRadius = 10 // veya istediğiniz bir değer
+        Image2.clipsToBounds = true
        
         // Gesture Recognizer eklemek için iconimage2 üzerinde kullanıcı etkileşimini etkinleştir
                iconimage2.isUserInteractionEnabled = true
