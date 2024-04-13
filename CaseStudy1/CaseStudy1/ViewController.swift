@@ -150,6 +150,7 @@ class ViewController: UIViewController {
                 sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
             }
         }
+        
         func removeFromFavorites(book: Result) {
             let db = Firestore.firestore()
             let favoritesCollection = db.collection("favorites")
@@ -213,6 +214,8 @@ class ViewController: UIViewController {
                     destination.name = book.name
                     destination.titlename = book.artistName
                     destination.imageimage = book.artworkUrl100
+                    destination.artistURL = book.artistURL ?? "yok"
+                    destination.releasedate = book.releaseDate
                 }
             }
         }
