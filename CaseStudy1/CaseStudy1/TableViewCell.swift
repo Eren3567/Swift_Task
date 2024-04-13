@@ -22,6 +22,9 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var Label2: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        ImageView.layer.cornerRadius = 10 // veya istediğiniz bir değer
+        ImageView.clipsToBounds = true
         // Initialization code
     }
 
