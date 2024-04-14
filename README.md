@@ -12,7 +12,7 @@ __TECH USED__
 
     • JSON
     • Performe Segue
-    • PlayGround
+    • PlayGrounds
     • TableView
     • TableStructure 
 
@@ -32,7 +32,7 @@ General Explanation... I recorded the names and phone numbers using Core data. T
 __TECH USED__ 
 
     • Core Data
-    • PlayGround
+    • PlayGrounds
     • TableView
     • TableStructure 
 
