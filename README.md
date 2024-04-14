@@ -4,7 +4,8 @@ General Explanation... I completed listing the movies and adding them to favorit
 
 
 PHOTO
-![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-04-14%20at%2013.54.07.png)
+![alt text](<img src="https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-04-14%20at%2013.54.07.png" alt="Screenshot" width="400">
+)
 
 ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-04-14%20at%2013.54.20.png)
 __TECH USED__ 
