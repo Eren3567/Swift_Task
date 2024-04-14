@@ -4,10 +4,10 @@ General Explanation... I completed listing the movies and adding them to favorit
 
 
 PHOTO
-![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-04-14%20at%2013.54.20-min%20(1).png)
-)
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(1).png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015.png)
 
-![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015.png)
+
+
 __TECH USED__ 
 
     • JSON
