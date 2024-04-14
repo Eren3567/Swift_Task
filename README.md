@@ -43,7 +43,7 @@ __TECH USED__
 # Map App (Map3)
 
 General Explanation... 
-In Core Data, I defined the data that the user should use. I asked the user to enter Location and Description in a list. Afterwards, I asked for places to be marked on the map and I recorded them. While doing this, I used Core data, TableView, Map Kit features.
+In Core Data, I defined the data that the user should use. I asked the user to enter Location and Description in a list. Afterwards, I asked for places to be marked on the map and I recorded them. While doing this, I used Core data, TableView, MapKit features.
 
 
 
