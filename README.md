@@ -5,7 +5,7 @@ I completed listing the movies and adding them to favorites using the JSON Parse
 
 
 
-![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(1).png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015.png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(2).png)
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(1).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015.png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(2).png)
 
 
 
@@ -26,7 +26,7 @@ I recorded the names and phone numbers using Core data. The user registered the 
 
 
 
-![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(6).png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(7).png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(8).png)
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(6).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(7).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(8).png)
 
 
 
@@ -47,7 +47,7 @@ In Core Data, I defined the data that the user should use. I asked the user to e
 
 
 
-![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(9).png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(10).png) 
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(9).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(10).png) 
 
 
 
