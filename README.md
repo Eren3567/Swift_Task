@@ -1,31 +1,38 @@
-# Food Order App
+# Movie Watch Lists (CaseStudy1)
 
-General Explanation... TableView yapısı kullanarak siparişlerin tasarımını ve listelenmesini tamamladım. Bunu yaparken SwiftUI,y,z özelliklerini kullandım. 
+General Explanation... I completed listing the movies and adding them to favorites using the JSON Parse process with the Codable structure. While doing this, I used tableview and JSON features. I also completed the registration on Firebase
 
 
-PHOTO
-![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/dog.jpg)
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(1).png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015.png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(2).png)
+
 
 
 __TECH USED__ 
 
-    • SwiftUI
+    • JSON
+    • Performe Segue
     • PlayGround
     • TableView
     • TableStructure 
 
-[Github Link Here](https://github.com/Eren3567/Course-First-Repo)
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/CaseStudy1)
 
-# Food Order App 2 
+# Phone Number Registration App (ContactAppWithCoreData)
 
-General Explanation... TableView yapısı kullanarak siparişlerin tasarımını ve listelenmesini tamamladım. Bunu yaparken SwiftUI,y,z özelliklerini kullandım. 
+General Explanation... I recorded the names and phone numbers using Core data. The user registered the people he wanted by entering their name and number. Using the tableview structure, I had the user delete or update by swiping left. While doing this, I used Core Data, Tableview, Navigation bar features.
 
 
-PHOTO
 
-TECH USED  
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(3).png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(5).png)
 
-    • SwiftUI
+
+
+__TECH USED__ 
+
+    • Core Data
     • PlayGround
     • TableView
     • TableStructure 
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/ContactAppWithCoreData)
