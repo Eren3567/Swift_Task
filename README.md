@@ -1,9 +1,9 @@
-# Movie Watch Lists
+# Movie Watch Lists (CaseStudy1)
 
 General Explanation... I completed listing the movies and adding them to favorites using the JSON Parse process with the Codable structure. While doing this, I used tableview and JSON features. I also completed the registration on Firebase
 
 
-PHOTO
+
 ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(1).png) ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015.png)
 
 
