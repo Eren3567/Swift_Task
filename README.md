@@ -60,3 +60,24 @@ __TECH USED__
     • MapKit 
     
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/Map3)
+
+# Saving by listing the photos in the album (FirstFirebaseApplication)
+
+General Explanation... 
+I designed to create an email address and password with Firebase authentication. I went into the albums on the phone, selected photos and uploaded them to Firebase storage. I made a list and showed it to the user
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(11).png)      ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(13).png)      ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(12).png)
+
+
+
+__TECH USED__ 
+
+    • Firebase 
+    • Performe Segue
+    • PlayGrounds
+    • TableView
+    • TableStructure 
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/FirstFirebaseApplication)
