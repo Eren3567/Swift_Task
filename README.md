@@ -64,7 +64,7 @@ __TECH USED__
 # Saving by listing the photos in the album (FirstFirebaseApplication)
 
 General Explanation... 
-I designed to create an email address and password with Firebase authentication. I went into the albums on the phone, selected photos and uploaded them to Firebase storage. I made a list and showed it to the user
+I designed to create an email address and password with Firebase authentication. I entered into the albums on the phone, selected photos and uploaded them to Firebase storage. I made a list and showed it to the user
 
 
 
