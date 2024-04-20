@@ -81,3 +81,23 @@ __TECH USED__
     • TableStructure 
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/FirstFirebaseApplication)
+
+# Make Calculater in Apps (HesapYapma)
+
+General Explanation... 
+I performed the desired operations by entering numerical values. I printed the results of these operations on the screen in the application.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(14).png)     
+
+
+
+__TECH USED__ 
+
+   
+    • Performe Segue
+    • PlayGrounds
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/HesapYapma)
