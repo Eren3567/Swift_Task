@@ -48,7 +48,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97298258540000004" green="0.91814776340000004" blue="0.62936550739999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="zE4-3t-ppz"/>
                     <connections>
@@ -144,46 +144,52 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="600" id="ONt-vn-abL" customClass="FeedCell" customModule="FirstFirebaseApplication" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="600"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="367" id="ONt-vn-abL" customClass="FeedCell" customModule="FirstFirebaseApplication" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ONt-vn-abL" id="VPQ-tB-Taq">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="367"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YcI-SY-YV9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="367"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgJ-IP-W1d">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="186.66666666666666"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="109"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="KUS-XF-sUn"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanıcı Yorumu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJi-eb-5ex">
-                                                            <rect key="frame" x="0.0" y="206.66666666666669" width="393" height="186.66666666666669"/>
+                                                            <rect key="frame" x="0.0" y="129" width="393" height="109"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="1mQ-b5-ufG"/>
+                                                                <constraint firstAttribute="width" secondItem="SJi-eb-5ex" secondAttribute="height" multiplier="393:109" id="XRc-xX-9G0"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ekran Resmi 2023-12-17 12.36.49" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-nE-619" customClass="SDAnimatedImageView">
-                                                            <rect key="frame" x="0.0" y="413.33333333333331" width="393" height="186.66666666666669"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="444" id="JlX-Rh-4zd"/>
-                                                            </constraints>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ekran Resmi 2023-12-17 12.36.49" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-nE-619" customClass="SDAnimatedImageView">
+                                                            <rect key="frame" x="0.0" y="258" width="393" height="109"/>
                                                         </imageView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="PYC-nE-619" secondAttribute="bottom" id="bxf-Gx-TxM"/>
+                                                        <constraint firstItem="PYC-nE-619" firstAttribute="leading" secondItem="YcI-SY-YV9" secondAttribute="leading" constant="40" id="egd-Cu-aJf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PYC-nE-619" secondAttribute="bottom" id="jVY-sb-X5m"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PYC-nE-619" secondAttribute="trailing" constant="40" id="zed-mq-Qgi"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YcI-SY-YV9" firstAttribute="centerX" secondItem="VPQ-tB-Taq" secondAttribute="centerX" id="1Nr-sV-JNV"/>
-                                                <constraint firstAttribute="trailing" secondItem="YcI-SY-YV9" secondAttribute="trailing" id="6yl-lY-300"/>
-                                                <constraint firstItem="YcI-SY-YV9" firstAttribute="top" secondItem="VPQ-tB-Taq" secondAttribute="top" id="LXh-gy-08P"/>
-                                                <constraint firstItem="YcI-SY-YV9" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leading" id="LhQ-hL-5k4"/>
-                                                <constraint firstItem="YcI-SY-YV9" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leadingMargin" constant="-10" id="Nen-4d-fX5"/>
-                                                <constraint firstAttribute="bottom" secondItem="YcI-SY-YV9" secondAttribute="bottom" id="ebd-mx-UaL"/>
-                                                <constraint firstItem="YcI-SY-YV9" firstAttribute="top" secondItem="VPQ-tB-Taq" secondAttribute="topMargin" constant="-1" id="iEC-Vq-rvr"/>
-                                                <constraint firstItem="YcI-SY-YV9" firstAttribute="centerY" secondItem="VPQ-tB-Taq" secondAttribute="centerY" id="jw6-eS-AFG"/>
+                                                <constraint firstItem="YcI-SY-YV9" firstAttribute="leading" secondItem="VPQ-tB-Taq" secondAttribute="leading" id="SQN-du-SaR"/>
+                                                <constraint firstAttribute="trailing" secondItem="YcI-SY-YV9" secondAttribute="trailing" id="kKf-RV-cjV"/>
+                                                <constraint firstItem="YcI-SY-YV9" firstAttribute="top" secondItem="VPQ-tB-Taq" secondAttribute="top" id="mJN-Jb-KaM"/>
+                                                <constraint firstAttribute="bottom" secondItem="YcI-SY-YV9" secondAttribute="bottom" id="nXD-cI-VaU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -198,14 +204,10 @@
                         <viewLayoutGuide key="safeArea" id="iTb-GU-ghV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="trailing" secondItem="iTb-GU-ghV" secondAttribute="trailing" id="DmO-mf-INC"/>
-                            <constraint firstItem="iTb-GU-ghV" firstAttribute="bottom" secondItem="d1X-T3-Nm2" secondAttribute="bottom" id="GoK-XR-e1c"/>
-                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="bottom" secondItem="iTb-GU-ghV" secondAttribute="bottom" id="Kie-tS-OHS"/>
-                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="top" secondItem="iTb-GU-ghV" secondAttribute="top" id="L8w-0P-CNM"/>
-                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="leading" secondItem="iTb-GU-ghV" secondAttribute="leading" id="csl-9E-nj8"/>
-                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="leading" secondItem="iTb-GU-ghV" secondAttribute="leading" id="f5z-zf-KFf"/>
-                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="top" secondItem="iTb-GU-ghV" secondAttribute="top" id="m8p-SK-nQo"/>
-                            <constraint firstItem="iTb-GU-ghV" firstAttribute="trailing" secondItem="d1X-T3-Nm2" secondAttribute="trailing" id="yZw-t2-Epu"/>
+                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="top" secondItem="iTb-GU-ghV" secondAttribute="top" id="7TN-FM-vcT"/>
+                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="leading" secondItem="iTb-GU-ghV" secondAttribute="leading" id="aef-ew-WIl"/>
+                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="bottom" secondItem="iTb-GU-ghV" secondAttribute="bottom" id="dD0-Xc-1ta"/>
+                            <constraint firstItem="d1X-T3-Nm2" firstAttribute="centerX" secondItem="ccg-SN-Crt" secondAttribute="centerX" id="v6x-mt-Wy5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="rectangle.portrait.on.rectangle.portrait" catalog="system" id="9a0-9E-Tbf"/>
@@ -215,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdM-gF-aNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="-593"/>
+            <point key="canvasLocation" x="954.96183206106866" y="-593.66197183098598"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Jdf-gz-8qm">
