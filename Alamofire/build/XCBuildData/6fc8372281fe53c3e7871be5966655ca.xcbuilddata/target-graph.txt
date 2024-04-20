@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'Pods-Alamofire' in project 'Pods'
+➜ Explicit dependency on target 'Alamofire' in project 'Pods'
+Target 'Alamofire' in project 'Pods' (no dependencies)
