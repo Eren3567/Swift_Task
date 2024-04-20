@@ -122,3 +122,25 @@ __TECH USED__
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/Kaydet)
 
+# Make a warning message (Uyarı)
+
+General Explanation... 
+I showed warning message when password is entered using UIAlertController
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(16).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(17).png)        
+
+
+
+__TECH USED__ 
+
+    
+    • UIAlertController
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/uyar%C4%B1)
+
