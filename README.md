@@ -99,3 +99,22 @@ __TECH USED__
   
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/HesapYapma)
+
+# Saving data in the Apps (Kaydet)
+
+General Explanation... 
+I showed you how to store data in the application. I also implemented the Data Storage method with the UserDefault method.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(15).png)     
+
+
+
+__TECH USED__ 
+  • UserDefault
+  • PlayGrounds
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/Kaydet)
+
