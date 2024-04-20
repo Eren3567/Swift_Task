@@ -95,9 +95,7 @@ I performed the desired operations by entering numerical values. I printed the r
 
 __TECH USED__ 
 
-   
-    • Performe Segue
-    • PlayGrounds
+  • PlayGrounds
   
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/HesapYapma)
