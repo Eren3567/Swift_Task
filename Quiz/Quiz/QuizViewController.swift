@@ -41,6 +41,14 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchDocumentIDs()
+        
+        
+        AnswerA.textColor = UIColor.label
+        AnswerB.textColor = UIColor.label
+        AnswerC.textColor = UIColor.label
+        AnswerD.textColor = UIColor.label
+        ScoreLabel.textColor = UIColor.label
+        QuestionLabel.textColor = UIColor.label
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
               // Arka plan görüntüsünü ayarlar
