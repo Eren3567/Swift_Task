@@ -144,3 +144,26 @@ __TECH USED__
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/uyar%C4%B1)
 
+# Data transfer and merging with other data (ikinciviewcontrol2)
+
+General Explanation... 
+Data was transferred to another screen with the prepare segue method, and this data was combined with other data and displayed by pressing a button at the bottom of the screen.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(19).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(20).png)        
+
+
+
+__TECH USED__ 
+
+    
+    • PrepareSegue
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/ikinciviewcontrol2)
+
+
