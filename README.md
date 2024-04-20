@@ -112,8 +112,12 @@ I showed you how to store data in the application. I also implemented the Data S
 
 
 __TECH USED__ 
-  • UserDefault
-  • PlayGrounds
+
+    
+    • UserDefault
+    • PlayGrounds
+   
+ 
   
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/Kaydet)
