@@ -17,6 +17,9 @@ class ViewControllerProfileDetail: UIViewController {
     var username : String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       KisiselBilgiLabel.textColor = UIColor.label
+       userNameLabel.textColor = UIColor.label
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
               // Arka plan görüntüsünü ayarlar
