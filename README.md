@@ -167,3 +167,27 @@ __TECH USED__
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/ikinciviewcontrol2)
 
 
+# Showing email and password on the screen with a warning method (AlertApplication)
+
+General Explanation... 
+With the alert method, I requested the user's password and email, and then I showed these data on the screen.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(23).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(24).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(25).png)  
+
+
+
+__TECH USED__ 
+
+    
+    • AlertController with AddTextField
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/AlertApplication)
+
+
+
