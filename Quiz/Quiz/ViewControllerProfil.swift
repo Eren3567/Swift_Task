@@ -18,6 +18,11 @@ class ViewControllerProfil: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        KişiselBilgi.textColor = UIColor.label
+        HesabımıSilLabel.textColor = UIColor.label
+        UygulamaHakkındaLabel.textColor = UIColor.label
+        SınavlarımLabel.textColor = UIColor.label
+
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
               // Arka plan görüntüsünü ayarlar
@@ -253,17 +258,16 @@ class ViewControllerProfil: UIViewController {
     }
 
 
-    @IBAction func SignOutButton(_ sender: Any) {
-    }
-    @IBAction func ToQuestionSelect(_ sender: Any) { do {
+    @IBAction func SignOutButton(_ sender: Any) {       do {
         try Auth.auth().signOut()
-        performSegue(withIdentifier: "ToSignOut", sender: nil)
+        
     }
-    
-    catch{
-       print("Hatalı")
-    }
-    
+        
+        catch{
+            print("Hatalı")
+        }
+        
+        
     }
     
     }
