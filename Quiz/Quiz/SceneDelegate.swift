@@ -14,17 +14,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        let CurrentUser = Auth.auth().currentUser
-        if CurrentUser != nil{
+        // Sahne bağlantılarını kontrol et
+        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // Kullanıcı oturumu kontrol et
+        if Auth.auth().currentUser != nil {
+            // Oturum açık bir kullanıcı varsa, ana ekranı göster
             let board = UIStoryboard(name: "Main", bundle: nil)
             let tabBar = board.instantiateViewController(identifier: "TabBar") as! UITabBarController
             window?.rootViewController = tabBar
-            
+        } else {
+            // Oturum açık bir kullanıcı yoksa, giriş ekranını göster
+            let board = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = board.instantiateViewController(identifier: "LoginViewController") as! ViewController
+            window?.rootViewController = loginVC
         }
-        guard let _ = (scene as? UIWindowScene) else { return }
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
