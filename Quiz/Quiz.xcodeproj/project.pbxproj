@@ -11,6 +11,8 @@
 		7A0D4F1A2B8A58C20071DF07 /* ViewControllerCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D4F192B8A58C20071DF07 /* ViewControllerCollection.swift */; };
 		7A0D4F1C2B8AA9800071DF07 /* TrueAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D4F1B2B8AA9800071DF07 /* TrueAnswer.mp3 */; };
 		7A0D4F1E2B8AAAA40071DF07 /* WrongAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D4F1D2B8AAAA40071DF07 /* WrongAnswer.mp3 */; };
+		7A0F04062BD1B037000A543A /* ViewControllerAllScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F04052BD1B037000A543A /* ViewControllerAllScores.swift */; };
+		7A0F04082BD1B5A3000A543A /* TableViewCellAllScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F04072BD1B5A3000A543A /* TableViewCellAllScores.swift */; };
 		7A2BF60D2B9B9F64004DBEAB /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2BF60C2B9B9F64004DBEAB /* ViewControllerHome.swift */; };
 		7A7090152B768C3B00C54C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7090142B768C3B00C54C52 /* AppDelegate.swift */; };
 		7A7090172B768C3B00C54C52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7090162B768C3B00C54C52 /* SceneDelegate.swift */; };
@@ -112,6 +114,8 @@
 		7A0D4F192B8A58C20071DF07 /* ViewControllerCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCollection.swift; sourceTree = "<group>"; };
 		7A0D4F1B2B8AA9800071DF07 /* TrueAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TrueAnswer.mp3; sourceTree = "<group>"; };
 		7A0D4F1D2B8AAAA40071DF07 /* WrongAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WrongAnswer.mp3; sourceTree = "<group>"; };
+		7A0F04052BD1B037000A543A /* ViewControllerAllScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAllScores.swift; sourceTree = "<group>"; };
+		7A0F04072BD1B5A3000A543A /* TableViewCellAllScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellAllScores.swift; sourceTree = "<group>"; };
 		7A2BF60C2B9B9F64004DBEAB /* ViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
 		7A7090112B768C3B00C54C52 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7090142B768C3B00C54C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -248,7 +252,9 @@
 				7A0D4F192B8A58C20071DF07 /* ViewControllerCollection.swift */,
 				7AC08EA82B9C939600F5E055 /* ViewControllerAboutApp.swift */,
 				7A7090282B76A1D500C54C52 /* QuizViewController.swift */,
+				7A0F04052BD1B037000A543A /* ViewControllerAllScores.swift */,
 				7A2BF60C2B9B9F64004DBEAB /* ViewControllerHome.swift */,
+				7A0F04072BD1B5A3000A543A /* TableViewCellAllScores.swift */,
 				7A7090182B768C3B00C54C52 /* ViewController.swift */,
 				7AEF619B2B851C7E00484099 /* ViewControllerScore.swift */,
 				7A0D4F172B89EEE30071DF07 /* CollectionViewCell.swift */,
@@ -429,6 +435,7 @@
 				7A7090152B768C3B00C54C52 /* AppDelegate.swift in Sources */,
 				7A953F422B93502000537D73 /* CollectionViewCell2.swift in Sources */,
 				7AC08EA92B9C939600F5E055 /* ViewControllerAboutApp.swift in Sources */,
+				7A0F04062BD1B037000A543A /* ViewControllerAllScores.swift in Sources */,
 				7A2BF60D2B9B9F64004DBEAB /* ViewControllerHome.swift in Sources */,
 				7A7090172B768C3B00C54C52 /* SceneDelegate.swift in Sources */,
 				7AE5431B2B817E9E000718F9 /* ViewControllerFinished.swift in Sources */,
@@ -441,6 +448,7 @@
 				7AEF619E2B851D9800484099 /* Profile.swift in Sources */,
 				7A953F472B93774300537D73 /* ViewControllerProfileDetail.swift in Sources */,
 				7AEF619C2B851C7F00484099 /* ViewControllerScore.swift in Sources */,
+				7A0F04082BD1B5A3000A543A /* TableViewCellAllScores.swift in Sources */,
 				7A0D4F182B89EEE30071DF07 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,7 +601,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = WKASSZ9CY5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quiz/Info.plist;
@@ -603,7 +611,6 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -613,9 +620,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erencetintas.Quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -626,7 +635,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = WKASSZ9CY5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quiz/Info.plist;
@@ -636,7 +645,6 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -646,9 +654,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erencetintas.Quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
