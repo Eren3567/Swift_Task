@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,44 +15,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTI-ne-DtR">
-                                <rect key="frame" x="109" y="238" width="192" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmb-A9-pOn">
-                                <rect key="frame" x="112" y="425" width="192" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyC-lU-nTw">
-                                <rect key="frame" x="131" y="152" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyC-lU-nTw">
+                                <rect key="frame" x="108" y="152" width="176" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="o6t-pT-Xlg"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alert Control"/>
                                 <connections>
                                     <action selector="Alert1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lfF-rx-roX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPD-z9-YlF">
-                                <rect key="frame" x="126" y="342" width="85" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPD-z9-YlF">
+                                <rect key="frame" x="102" y="245" width="209" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="mtg-Zs-8zC"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button2"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Email and Password"/>
                                 <connections>
                                     <action selector="Alert2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bjt-4C-mIr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Result email and password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmb-A9-pOn">
+                                <rect key="frame" x="81" y="364" width="255" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mPD-z9-YlF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="9Ne-3E-XHZ"/>
+                            <constraint firstItem="lyC-lU-nTw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="HjC-sQ-QTM"/>
+                            <constraint firstItem="pmb-A9-pOn" firstAttribute="top" secondItem="mPD-z9-YlF" secondAttribute="bottom" constant="84" id="LzX-Fu-lhn"/>
+                            <constraint firstItem="pmb-A9-pOn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MXJ-Ea-acy"/>
+                            <constraint firstItem="mPD-z9-YlF" firstAttribute="top" secondItem="lyC-lU-nTw" secondAttribute="bottom" constant="58" id="dvn-3e-9Hz"/>
+                            <constraint firstItem="lyC-lU-nTw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="nfm-rH-mtW"/>
+                            <constraint firstItem="pmb-A9-pOn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="sLG-xT-kd7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pmb-A9-pOn" secondAttribute="bottom" constant="394" id="tdK-bY-umS"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="Label" destination="gTI-ne-DtR" id="cLX-cS-VZP"/>
                         <outlet property="Label2" destination="pmb-A9-pOn" id="iwM-XL-fbh"/>
                     </connections>
                 </viewController>
@@ -62,9 +66,4 @@
             <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
