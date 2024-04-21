@@ -232,3 +232,27 @@ __TECH USED__
   
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/AnimationFABApp)
+
+# PickerViewWithButton
+
+General Explanation... 
+
+Using the pickerview method, I selected the recorded data and showed it to the user on the screen. I also presented ok or cancel buttons to the user with UIBarButtonItem.
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(30).png)  
+
+
+
+__TECH USED__ 
+
+    • UIToolbar
+    • Pickerview
+    • UIBarButtonItem
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/PickerViewWithButton)
+
