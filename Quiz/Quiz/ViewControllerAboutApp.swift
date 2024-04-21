@@ -13,7 +13,7 @@ class ViewControllerAboutApp: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        versionLabel.textColor = UIColor.label
+   
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
               // Arka plan görüntüsünü ayarlar
