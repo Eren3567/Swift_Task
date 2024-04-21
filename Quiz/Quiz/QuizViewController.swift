@@ -42,13 +42,7 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         fetchDocumentIDs()
         
-        
-        AnswerA.textColor = UIColor.label
-        AnswerB.textColor = UIColor.label
-        AnswerC.textColor = UIColor.label
-        AnswerD.textColor = UIColor.label
-        ScoreLabel.textColor = UIColor.label
-        QuestionLabel.textColor = UIColor.label
+       
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
               // Arka plan görüntüsünü ayarlar
@@ -137,6 +131,9 @@ class QuizViewController: UIViewController {
      }
      */
     
+   
+
+
     @objc func answerTapped(_ sender: UITapGestureRecognizer) {
         guard let label = sender.view as? UILabel else { return }
         
@@ -410,4 +407,20 @@ class QuizViewController: UIViewController {
         }
     }
 
+}
+extension QuizViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if #available(iOS 13.0, *) {
+            // iOS 13 ve sonrasında, etiket rengini varsayılan renge ayarla
+            QuestionLabel.textColor = UIColor.label
+        } else {
+            // iOS 12 ve öncesi için, etiket rengini siyah olarak ayarla
+            QuestionLabel.textColor = UIColor.black
+        }
+        
+        // Eğer metin alanı varsayılan metni içeriyorsa, temizle
+        if QuestionLabel.text == "organizing items into familiar, manageable units; often occurs automatically" {
+            QuestionLabel.text = ""
+        }
+    }
 }
