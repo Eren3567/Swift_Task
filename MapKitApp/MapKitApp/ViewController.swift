@@ -35,7 +35,7 @@ class ViewController: UIViewController {
 extension ViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let lastLocation : CLLocation = locations[locations.count-1]
-        
+        print(lastLocation.coordinate.latitude)
         Label1.text = String(lastLocation.coordinate.latitude)
         Label2.text = String(lastLocation.coordinate.longitude)
         Label3.text = String(lastLocation.speed)
