@@ -211,3 +211,24 @@ __TECH USED__
   
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/DetailCollectionView)
+
+# Button selection with animation (AnimationFABApp)
+
+General Explanation... 
+By designing a button in the app. I enabled the user to access different button options by moving animatedly when the button is pressed.
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(28).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(29).png)  
+
+
+
+__TECH USED__ 
+
+    • UIView.animate
+    • CGAffineTransform
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/AnimationFABApp)
