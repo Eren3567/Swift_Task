@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,53 +15,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YlE-eK-LJi">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YlE-eK-LJi">
                                 <rect key="frame" x="116" y="214" width="174" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="FTV-I7-6L0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsQ-h5-Mdp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsQ-h5-Mdp">
                                 <rect key="frame" x="121" y="392" width="169" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="3L8-PW-sIt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9z-u4-mi3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9z-u4-mi3">
                                 <rect key="frame" x="121" y="491" width="169" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hy-wi-GYx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hy-wi-GYx">
                                 <rect key="frame" x="84" y="295" width="77" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Kaydet"/>
                                 <connections>
                                     <action selector="Kaydetbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg1-jk-Vx9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSS-oQ-QBT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSS-oQ-QBT">
                                 <rect key="frame" x="258" y="295" width="43" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sil"/>
                                 <connections>
                                     <action selector="SilButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rml-WQ-tos"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xlz-uZ-tIJ">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xlz-uZ-tIJ">
                                 <rect key="frame" x="119" y="121" width="169" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="lPJ-Zw-c4T"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96841150519999997" green="0.94707620969999995" blue="0.74594472840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="H9z-u4-mi3" firstAttribute="top" secondItem="BsQ-h5-Mdp" secondAttribute="bottom" constant="56" id="0aq-i0-pzZ"/>
+                            <constraint firstItem="xlz-uZ-tIJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="3hO-MP-ffj"/>
+                            <constraint firstItem="WSS-oQ-QBT" firstAttribute="baseline" secondItem="8hy-wi-GYx" secondAttribute="firstBaseline" id="44a-0A-wvI"/>
+                            <constraint firstItem="BsQ-h5-Mdp" firstAttribute="top" secondItem="8hy-wi-GYx" secondAttribute="bottom" constant="62" id="6Mk-OM-p6A"/>
+                            <constraint firstItem="BsQ-h5-Mdp" firstAttribute="leading" secondItem="H9z-u4-mi3" secondAttribute="leading" id="70S-dw-PGz"/>
+                            <constraint firstItem="YlE-eK-LJi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="FCa-lC-j73"/>
+                            <constraint firstItem="H9z-u4-mi3" firstAttribute="leading" secondItem="BsQ-h5-Mdp" secondAttribute="leading" id="Ffm-r0-bsm"/>
+                            <constraint firstItem="xlz-uZ-tIJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="KFk-4A-3Zu"/>
+                            <constraint firstItem="BsQ-h5-Mdp" firstAttribute="trailing" secondItem="H9z-u4-mi3" secondAttribute="trailing" id="Mil-IE-xuL"/>
+                            <constraint firstItem="8hy-wi-GYx" firstAttribute="baseline" secondItem="WSS-oQ-QBT" secondAttribute="baseline" id="S0X-55-3xH"/>
+                            <constraint firstItem="BsQ-h5-Mdp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="Uii-kq-wmA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H9z-u4-mi3" secondAttribute="bottom" constant="284" id="ZJ1-G9-7KZ"/>
+                            <constraint firstItem="8hy-wi-GYx" firstAttribute="top" secondItem="YlE-eK-LJi" secondAttribute="bottom" constant="47" id="cfD-CG-Efj"/>
+                            <constraint firstItem="YlE-eK-LJi" firstAttribute="trailing" secondItem="BsQ-h5-Mdp" secondAttribute="trailing" id="iHA-za-nik"/>
+                            <constraint firstItem="xlz-uZ-tIJ" firstAttribute="centerX" secondItem="YlE-eK-LJi" secondAttribute="centerX" id="kMI-ZV-N5M"/>
+                            <constraint firstItem="8hy-wi-GYx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="n7G-24-XR0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YlE-eK-LJi" secondAttribute="trailing" constant="103" id="oY3-1M-ObZ"/>
+                            <constraint firstItem="WSS-oQ-QBT" firstAttribute="leading" secondItem="8hy-wi-GYx" secondAttribute="trailing" constant="97" id="qbf-Mp-2G8"/>
+                            <constraint firstItem="YlE-eK-LJi" firstAttribute="top" secondItem="xlz-uZ-tIJ" secondAttribute="bottom" constant="59" id="y33-2r-aqh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="Label1" destination="BsQ-h5-Mdp" id="zbL-V4-sGn"/>
@@ -76,9 +99,4 @@
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
