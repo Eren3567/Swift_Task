@@ -18,10 +18,7 @@ class ViewControllerProfil: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        KişiselBilgi.textColor = UIColor.label
-        HesabımıSilLabel.textColor = UIColor.label
-        UygulamaHakkındaLabel.textColor = UIColor.label
-        SınavlarımLabel.textColor = UIColor.label
+      
 
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
               
