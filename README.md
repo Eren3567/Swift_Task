@@ -190,4 +190,24 @@ __TECH USED__
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/AlertApplication)
 
 
+# Using the Collection structure (DetailCollectionView)
 
+General Explanation... 
+A list of movies was created using the Collection structure. Prices of cinema films and purchasing scenarios were made.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(26).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(27).png)  
+
+
+
+__TECH USED__ 
+
+    • PrepareSegue
+    • Collectionview
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/DetailCollectionView)
