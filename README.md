@@ -240,7 +240,7 @@ General Explanation...
 Using the pickerview method, I selected the recorded data and showed it to the user on the screen. I also presented ok or cancel buttons to the user with UIBarButtonItem.
 
 
-![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(31).png)  
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(32).png)  
 
 
 
