@@ -290,4 +290,28 @@ __TECH USED__
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/SearchBar)
 
 
+# Using SearchBarandTableView (SearchBarandTableView)
+
+General Explanation... 
+
+I created it for the user to help the user find the desired data by entering the words on the list using the SearchBar method. I made this call via tableview
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(34).png)  
+
+
+
+__TECH USED__ 
+
+    • SearchBar
+    • ScopeButtonTitles
+    • TableView
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/SearchBarandTableView)
+
+
 
