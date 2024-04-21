@@ -13,17 +13,29 @@ class ikinciViewController: UIViewController {
     @IBOutlet weak var sifreyigösterlabel: UILabel!
     @IBOutlet weak var Bulunansifre: UITextField!
     @IBOutlet weak var ikinciviewcontroller: UITextField!
-    
+    var bulunansifre = ""
+    @IBOutlet weak var BulunanSifre: UILabel!
     var verilensifre = ""
+    var ikincideger = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        sifreyigösterlabel.text! = verilensifre
         
+        sifreyigösterlabel.text! = verilensifre
+        ikincideger = ikinciviewcontroller.text!
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func sonucBul(_ sender: Any) {   // ikinciviewcontroller alanına girilmiş bir değer var mı kontrol edin
+        if let ikinciDeger = ikinciviewcontroller.text, !ikinciDeger.isEmpty {
+            // Eğer değer varsa, ikincideger'e ata ve BulunanSifre label'ına yazdır
+            ikincideger = ikinciDeger
+            BulunanSifre.text = "\(ikincideger) \(verilensifre)"
+        } else {
+            // Eğer değer yoksa, sadece verilensifre'yi yazdır
+            BulunanSifre.text = verilensifre
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
