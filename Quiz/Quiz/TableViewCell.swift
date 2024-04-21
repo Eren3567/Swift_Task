@@ -16,10 +16,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var username: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        scoreLabel.textColor = UIColor.label
-        dateLabel.textColor = UIColor.label
-        userNameLabel.textColor = UIColor.label
-        username.textColor = UIColor.label
+    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
