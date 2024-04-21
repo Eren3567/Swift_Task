@@ -15,8 +15,7 @@ class TableViewCellAllScores: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        UserDate.textColor = UIColor.label
-        UserName.textColor = UIColor.label
+    
         // Initialization code
     }
 
