@@ -15,9 +15,9 @@ var receivedScore = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        finishedLabel.textColor = UIColor.label
+
        
-        
+    
         
         finishedLabel.text = receivedScore
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
