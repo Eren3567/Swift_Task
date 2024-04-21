@@ -81,3 +81,113 @@ __TECH USED__
     • TableStructure 
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/FirstFirebaseApplication)
+
+# Make Calculater in Apps (HesapYapma)
+
+General Explanation... 
+I performed the desired operations by entering numerical values. I printed the results of these operations on the screen in the application.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(14).png)     
+
+
+
+__TECH USED__ 
+
+  • PlayGrounds
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/HesapYapma)
+
+# Saving data in the Apps (Kaydet)
+
+General Explanation... 
+I showed you how to store data in the application. I also implemented the Data Storage method with the UserDefault method.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(15).png)     
+
+
+
+__TECH USED__ 
+
+    
+    • UserDefault
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/Kaydet)
+
+# Make a warning message (Uyarı)
+
+General Explanation... 
+I showed warning message when password is entered using UIAlertController
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(16).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(17).png)        
+
+
+
+__TECH USED__ 
+
+    
+    • UIAlertController
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/uyar%C4%B1)
+
+# Data transfer and merging with other data (ikinciviewcontrol2)
+
+General Explanation... 
+Data was transferred to another screen with the prepare segue method, and this data was combined with other data and displayed by pressing a button at the bottom of the screen.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(22).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(20).png)        
+
+
+
+__TECH USED__ 
+
+    
+    • PrepareSegue
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/ikinciviewcontrol2)
+
+
+# Showing email and password on the screen with a warning method (AlertApplication)
+
+General Explanation... 
+With the alert method, I requested the user's password and email, and then I showed these data on the screen.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(23).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(24).png)    ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(25).png)  
+
+
+
+__TECH USED__ 
+
+    
+    • AlertController with AddTextField
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/AlertApplication)
+
+
+
