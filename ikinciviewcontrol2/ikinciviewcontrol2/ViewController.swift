@@ -41,6 +41,8 @@ class ViewController: UIViewController {
             
         }
         func ikincivcyegitbutton(_ sender: Any) {
+
+            
         }
     }
     
