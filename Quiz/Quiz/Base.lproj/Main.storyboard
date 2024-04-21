@@ -229,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykg-6L-9sj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2852.6717557251909" y="-162.67605633802819"/>
+            <point key="canvasLocation" x="2686" y="-43"/>
         </scene>
         <!--Skorlar-->
         <scene sceneID="OWh-Wh-yQ5">
@@ -256,13 +256,13 @@
                                                         <constraint firstAttribute="height" constant="70" id="kF2-fg-OC4"/>
                                                         <constraint firstAttribute="width" constant="313" id="tCg-g4-2Yc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserDate" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diQ-kd-cQk">
                                                     <rect key="frame" x="40" y="218" width="313" height="70"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -271,7 +271,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="azW-lB-1jW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -306,7 +306,7 @@
                             <constraint firstItem="Cok-7K-9Tf" firstAttribute="leading" secondItem="Wy4-aE-maT" secondAttribute="leading" id="wDD-cW-RmN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Skorlar" image="trophy" catalog="system" id="fcx-2v-5Kk"/>
+                    <tabBarItem key="tabBarItem" title="Skorlar" image="trophy.fill" catalog="system" id="fcx-2v-5Kk"/>
                     <connections>
                         <outlet property="TableviewAllscores" destination="Cok-7K-9Tf" id="Nt2-Xc-fIx"/>
                     </connections>
@@ -354,7 +354,7 @@
                                 <rect key="frame" x="16" y="464" width="361" height="78.333333333333371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.23115749820000001" green="0.083716410249999998" blue="0.96841150519999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oyunun Kurallları" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMO-AL-iL6">
@@ -383,7 +383,7 @@
                             <constraint firstItem="b79-oo-xAI" firstAttribute="centerX" secondItem="M0r-VW-8KD" secondAttribute="centerX" id="yiU-al-mcU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ana Sayfa" image="house" catalog="system" id="qSL-qY-aiM"/>
+                    <tabBarItem key="tabBarItem" title="Ana Sayfa" image="house.fill" catalog="system" id="qSL-qY-aiM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mP-Kz-QOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -536,15 +536,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfl-gu-4kb">
-                                <rect key="frame" x="20" y="405" width="353" height="22"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="413" width="353" height="18"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s05-Cn-IG2">
-                                <rect key="frame" x="20" y="466" width="353" height="22"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="470" width="353" height="18"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0O-xr-VIa">
@@ -553,17 +553,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Şifremi Değiştir">
                                     <fontDescription key="titleFontDescription" name="Impact" family="Impact" pointSize="19"/>
-                                    <color key="baseForegroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseForegroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="changePassword:" destination="rQH-r2-hg4" eventType="touchUpInside" id="ngR-wq-Ceg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kişisel Bilgilerim" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TP-vz-Sfb">
-                                <rect key="frame" x="20" y="316" width="333" height="50.333333333333314"/>
+                                <rect key="frame" x="20" y="324" width="333" height="50.333333333333314"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWa-16-qIf">
@@ -624,7 +624,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="383" height="278"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uygulama Geliştirici: Eren Çetintaş" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYu-Ag-Pxu">
@@ -634,7 +634,7 @@
                                             <constraint firstAttribute="height" constant="34" id="3jG-yY-E7W"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -649,7 +649,7 @@
                                             <constraint firstAttribute="height" constant="34" id="fSI-NL-ZCg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -707,7 +707,7 @@
                                     <constraint firstAttribute="height" constant="80" id="TNF-2Q-IIV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.96841150519999997" green="0.94707620969999995" blue="0.74594472840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTX-jJ-8S4">
@@ -716,7 +716,7 @@
                                     <constraint firstAttribute="height" constant="60" id="e1J-Dd-FNf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.96841150519999997" green="0.94707620969999995" blue="0.74594472840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf4-h5-y1O">
@@ -725,7 +725,7 @@
                                     <constraint firstAttribute="height" constant="60" id="IAE-Qi-cDP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.96841150519999997" green="0.94707620969999995" blue="0.74594472840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer3" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTn-cf-HFb">
@@ -734,7 +734,7 @@
                                     <constraint firstAttribute="height" constant="60" id="Fby-vG-0US"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.96841150519999997" green="0.94707620969999995" blue="0.74594472840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer4" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnG-kP-2ai">
@@ -743,7 +743,7 @@
                                     <constraint firstAttribute="height" constant="60" id="Nla-cU-vtm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.96841150519999997" green="0.94707620969999995" blue="0.74594472840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrK-7A-XCJ">
@@ -762,12 +762,12 @@
                                     <constraint firstAttribute="height" constant="30" id="EQD-Bt-ZyS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.96841150519999997" green="0.94707620969999995" blue="0.74594472840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qfx-KE-aKZ"/>
-                        <color key="backgroundColor" red="1" green="0.92531083470758391" blue="0.66065754646667907" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cnG-kP-2ai" firstAttribute="top" secondItem="FTn-cf-HFb" secondAttribute="bottom" constant="28" id="1PF-YF-QTx"/>
                             <constraint firstItem="cnG-kP-2ai" firstAttribute="centerX" secondItem="n9j-P3-1g4" secondAttribute="centerX" id="1br-rN-50b"/>
@@ -975,14 +975,14 @@
                                     <constraint firstAttribute="height" constant="50" id="U7j-2q-hXK"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sınavlarım" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH9-w9-ECi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sınavlarım" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH9-w9-ECi">
                                 <rect key="frame" x="88" y="249" width="289" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uygulama Hakkında" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16c-bF-d1W">
@@ -992,7 +992,7 @@
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabımı Sil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g85-cP-0Ed">
@@ -1002,11 +1002,11 @@
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL5-ol-wkg">
-                                <rect key="frame" x="50" y="732" width="293" height="36"/>
+                                <rect key="frame" x="50" y="781" width="293" height="36"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Çıkış">
                                     <fontDescription key="titleFontDescription" name="Impact" family="Impact" pointSize="18"/>
@@ -1020,7 +1020,7 @@
                                 <rect key="frame" x="88" y="150" width="289" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="questionmark.app" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NXy-GO-B6u">
@@ -1064,7 +1064,7 @@
                             <constraint firstItem="NzV-gs-svb" firstAttribute="leading" secondItem="Gl3-qW-fPN" secondAttribute="leading" constant="30" id="wtT-nf-fUq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profil" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="Yfs-DN-pMg"/>
+                    <tabBarItem key="tabBarItem" title="Profil" image="person.circle.fill" catalog="system" selectedImage="person.crop.circle" id="Yfs-DN-pMg"/>
                     <connections>
                         <outlet property="HesabımıSilLabel" destination="g85-cP-0Ed" id="yAV-zF-NrM"/>
                         <outlet property="KişiselBilgi" destination="01N-iI-zi3" id="QEr-g4-p66"/>
@@ -1081,24 +1081,24 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8gu-i5-4q4"/>
-        <segue reference="UpQ-lQ-Dj3"/>
+        <segue reference="xyA-3x-T6n"/>
+        <segue reference="I7f-Mb-XjZ"/>
         <segue reference="iMB-ub-neq"/>
         <segue reference="x1b-TS-qAR"/>
         <segue reference="ZGA-RC-JaR"/>
-        <segue reference="DYG-gO-MPU"/>
+        <segue reference="snG-jv-Eti"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="414" height="896"/>
         <image name="Tebrik" width="2000" height="1414"/>
-        <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="pencil.circle" catalog="system" width="128" height="123"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle.badge.xmark" catalog="system" width="128" height="114"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="questionmark.app" catalog="system" width="128" height="114"/>
-        <image name="trophy" catalog="system" width="128" height="128"/>
+        <image name="trophy.fill" catalog="system" width="128" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
