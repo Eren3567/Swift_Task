@@ -427,3 +427,27 @@ __TECH USED__
   
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/MusicPlayer)
+
+
+# Saving data with CoreData, listing data(Coredata)
+
+General Explanation... 
+
+I had the user save data with CoreData, then retrieve the data and list it with Taleview. At the same time, I went to the phone's album and selected the desired picture.
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(48).png)  ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(55).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(53).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(54).png) 
+
+
+__TECH USED__ 
+
+    • Coredata
+    • UIImagePickerController
+    • Tableview
+    • GestureRecognizer
+    • PlayGrounds
+   
+
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/Coredata)
+
