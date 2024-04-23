@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         let incomingDate = notification.userInfo?["date"]
         let incomingObject = notification.userInfo?["object"] as! Person
         
-        Label1.text = " \(String(describing: incomingObject.name!)) - \(String(describing: incomingMessage!)) - \(String(describing: incomingDate!))"
+        Label1.text = " \(String(describing: incomingObject.name!)) - \(String(describing: incomingMessage!)) - \(String(describing: incomingObject.age!))"
     }
 
     @IBAction func GoButton(_ sender: Any) {
