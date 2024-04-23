@@ -16,9 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SBc-Cg-ZZx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SBc-Cg-ZZx">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -32,6 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pNf-tl-l8Y"/>
                     <connections>
+                        <outlet property="Tableview" destination="SBc-Cg-ZZx" id="Tho-aL-0R4"/>
                         <segue destination="rhk-XM-TSf" kind="show" identifier="Toviewcontroller2vc" id="toV-rt-NcR"/>
                     </connections>
                 </viewController>
@@ -68,6 +70,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Kaydet"/>
+                                <connections>
+                                    <action selector="Kaydet:" destination="rhk-XM-TSf" eventType="touchUpInside" id="ALo-Ta-Xgt"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün İsmi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9B-eZ-jub">
                                 <rect key="frame" x="87" y="355" width="229" height="34"/>
@@ -80,6 +85,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="yNE-Y1-NLA"/>
+                    <connections>
+                        <outlet property="ÜrünBedeniText" destination="ajp-Bj-rh3" id="PBt-1P-v0B"/>
+                        <outlet property="ÜrünFiyatıText" destination="3Rt-lv-oS4" id="jPq-l5-duR"/>
+                        <outlet property="ÜrünismiText" destination="d9B-eZ-jub" id="ZCS-TL-1xC"/>
+                        <outlet property="imageview" destination="xmp-m6-Agp" id="u09-qc-xZP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3B-28-CTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
