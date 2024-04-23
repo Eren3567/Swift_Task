@@ -313,5 +313,28 @@ __TECH USED__
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/SearchBarandTableView)
 
+# Send message between viewcontroller (DataTransfer-Show)
+
+General Explanation... 
+
+I sent logged in messages to another viewcontroller using UIStoryboard and navigationController
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(35).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(36).png)  
+
+
+
+__TECH USED__ 
+
+    • navigationController
+    • UIStoryboard
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/DataTransfer-Show)
+
 
 
