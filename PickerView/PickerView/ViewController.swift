@@ -19,7 +19,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         Picker.delegate = self
         Picker.dataSource = self
         
-        letter += ["a","b","c"]
+        letter += ["araba","tren","ucak"]
     }
 
 
