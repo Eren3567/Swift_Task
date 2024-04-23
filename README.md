@@ -474,3 +474,26 @@ __TECH USED__
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/NotificationCenter)
 
 
+# Using SliderAction and StepperAction(SliderStepper)
+
+General Explanation... 
+
+
+By making the user use SliderAction and StepperAction, I enabled the user to use this method for the action User wanted to perform
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(59).png)
+
+
+__TECH USED__ 
+
+    • SliderAction
+    • StepperAction
+    • PlayGrounds
+   
+
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/SliderStepper)
+
+
+
