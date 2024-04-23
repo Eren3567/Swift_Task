@@ -17,7 +17,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         super.viewDidLoad()
 Picker = UIPickerView()
         
-        letter += ["ac","bv","cf","dg"]
+        letter += ["araba","direksiyon","vites","tekerlek"]
         
         Picker?.dataSource = self
         Picker?.delegate = self
