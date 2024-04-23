@@ -10,9 +10,13 @@ import CoreData
 
 class ViewController2: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     @IBOutlet weak var ÜrünismiText: UITextField!
+   
     @IBOutlet weak var ÜrünFiyatıText: UITextField!
-    @IBOutlet weak var imageview: UIImageView!
+  
     @IBOutlet weak var ÜrünBedeniText: UITextField!
+    @IBOutlet weak var imageview: UIImageView!
+   
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,13 +49,19 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate,UINaviga
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        imageview.image = info[.originalImage] as? UIImage
-        
-        self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func KaydetButton(_ sender: Any) {
-        
+           if let editedImage = info[.editedImage] as? UIImage {
+               imageview.image = editedImage
+           } else if let originalImage = info[.originalImage] as? UIImage {
+               imageview.image = originalImage
+           }
+           dismiss(animated: true, completion: nil)
+       }
+       
+       func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+           dismiss(animated: true, completion: nil)
+       }
+   
+    @IBAction func Kaydet(_ sender: Any) {
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appdelegate.persistentContainer.viewContext
         
@@ -59,11 +69,12 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate,UINaviga
         
         alisveris.setValue(ÜrünismiText.text, forKey: "isim")
         alisveris.setValue(ÜrünBedeniText.text, forKey: "beden")
-        if let Fiyat = Int(ÜrünBedeniText.text!)
-        {
-            
-            alisveris.setValue(Fiyat, forKey: "fiyat")
+        if let fiyatText = ÜrünBedeniText.text, let fiyat = Int(fiyatText) {
+            alisveris.setValue(fiyat, forKey: "fiyat")
+        } else {
+            // Handle the case where the text is not a valid integer
         }
+
         alisveris.setValue(UUID(), forKey: "id")
         
         let data = imageview.image!.jpegData(compressionQuality: 0.5)
@@ -76,7 +87,8 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate,UINaviga
         catch{
             print("hata")
         }
-          }
+    }
+   
     
    
 
