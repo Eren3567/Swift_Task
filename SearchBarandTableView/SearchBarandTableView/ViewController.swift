@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-Letter = ["aa","bb","cc","dd","ee"]
+Letter = ["koltuk","buzdolabı","halı","dolap","yatak"]
         Search.delegate = self
         Table.delegate = self
         Table.dataSource = self
