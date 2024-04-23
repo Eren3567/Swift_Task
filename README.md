@@ -451,3 +451,26 @@ __TECH USED__
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/Coredata)
 
+# Sending and receiving data with NotificationCenter(NotificationCenter)
+
+General Explanation... 
+
+I sent data to the user via NotificationCenter and then captured this data and printed it on the screen.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(57).png)  ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(56).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(58).png)   
+
+
+__TECH USED__ 
+
+    • NotificationCenterPost
+    • NotificationCenterAddObserver
+    • PerformSegue
+    • PlayGrounds
+   
+
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/NotificationCenter)
+
+
