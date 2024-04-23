@@ -10,14 +10,23 @@ import CoreData
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
  
-    
     @IBOutlet weak var Tableview: UITableView!
+    
+    
     var isimdizisi = [String]()
     var iddizisi = [UUID]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        verial()
+        // Set the background color directly on the table view
+                Tableview.backgroundColor = UIColor.yellow
+                
+                // Alternatively, you can set a background view with yellow color
+                let yellowBackgroundView = UIView()
+                yellowBackgroundView.backgroundColor = UIColor.yellow
+        Tableview.backgroundView = yellowBackgroundView
+
         if let tableView = Tableview {
             tableView.delegate = self
             tableView.dataSource = self
@@ -40,23 +49,22 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        isimdizisi.count
+        return isimdizisi.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "isim"
-        
-        return cell
+            // Set the text label to the corresponding name from the data source
+        cell.textLabel?.text = isimdizisi[indexPath.row]
+            return cell
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(verial), name: NSNotification.Name(rawValue: "verigirildi"), object: nil)
+      verial()
+    
     }
     
-    @objc func verial(){
+ func verial() {
         isimdizisi.removeAll(keepingCapacity: false)
         iddizisi.removeAll(keepingCapacity: false)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -66,28 +74,30 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         fetchRequest.returnsObjectsAsFaults = false
         
-        
         do {
             let sonuclar = try context.fetch(fetchRequest)
             
-            for sonuc in  sonuclar as! [NSManagedObject]{
-                
-                if let isim = sonuc.value(forKey: "isim") as? String{
+            for sonuc in sonuclar as! [NSManagedObject] {
+                if let isim = sonuc.value(forKey: "isim") as? String {
                     isimdizisi.append(isim)
                 }
-                if let id = sonuc.value(forKey: "id") as? UUID{
+                if let id = sonuc.value(forKey: "id") as? UUID {
                     iddizisi.append(id)
+                }
+                if let beden = sonuc.value(forKey: "beden") as? String {
+                    isimdizisi.append(beden)
+                }
+                if let fiyat = sonuc.value(forKey: "fiyat") as? String {
+                    isimdizisi.append(fiyat)
                 }
             }
             
             Tableview.reloadData()
+        } catch {
+            print("Error fetching data: \(error.localizedDescription)")
         }
-        catch{
-            print("hatavar")
-        }
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "veri girildi") , object: nil)
-        self.navigationController?.popViewController(animated: true)
     }
+
     
 }
 
