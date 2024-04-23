@@ -361,3 +361,26 @@ __TECH USED__
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/NavigationControllerIntroduction)
 
 
+# Get notifications in apps (NavigationControllerIntroduction)
+
+General Explanation... 
+
+
+I enabled the user to receive notifications with UNUserNotificationCenter. With the code structure, the requested data comes to the top of the phone as a notification.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(43).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(44).png)  
+
+
+
+__TECH USED__ 
+
+    • UNUserNotificationCente
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/AllowInApp)
+
