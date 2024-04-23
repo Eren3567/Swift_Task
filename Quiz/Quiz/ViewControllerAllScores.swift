@@ -83,9 +83,9 @@ class ViewControllerAllScores: UIViewController {
            // } else {
            //     cell.userNameLabel.text = "Mail Adresi: Bilinmiyor"
            // }
-            cell.UserName.text = "Oyuncu Adı:\(score.username1 ?? "name")"
-            cell.UserScore.text = "Aldığı Puan:\(String(score.scoreLabel1))"
-            cell.UserDate.text = "Puanı Aldığı Tarih:\(dateToString(timestamp: score.dateLabel1!))"
+            cell.UserName.text = "Oyuncu Adı: \(score.username1 ?? "name")"
+            cell.UserScore.text = "Aldığı Puan: \(String(score.scoreLabel1))"
+            cell.UserDate.text = "Puanı Aldığı Tarih: \(dateToString(timestamp: score.dateLabel1!))"
           //  if let username = score.username1 {
           //      cell.username.text = "Kullanıcı Adı: \(username)"
           //  } else {
