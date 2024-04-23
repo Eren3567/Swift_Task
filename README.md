@@ -337,4 +337,163 @@ __TECH USED__
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/DataTransfer-Show)
 
 
+# Introduction to navigation controller with code (NavigationControllerIntroduction)
+
+General Explanation... 
+
+It was done to create Navigation Controller using code and enable user to use it. Using this structure, desired explanations can be created in the code content. Any segment can be used using SegmentIndex.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(38).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(39).png)  
+
+
+
+__TECH USED__ 
+
+    • navigationController
+    • SegmentIndex
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/NavigationControllerIntroduction)
+
+
+# Get notifications in apps (NavigationControllerIntroduction)
+
+General Explanation... 
+
+
+I enabled the user to receive notifications with UNUserNotificationCenter. With the code structure, the requested data comes to the top of the phone as a notification.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(43).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(44).png)  
+
+
+
+__TECH USED__ 
+
+    • UNUserNotificationCenter
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/AllowInApp)
+
+# Access the video in the application (VideoView)
+
+General Explanation... 
+
+I enabled the user to access the video she wanted in the application, turn on that video and watch it
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(45).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(46).png)  
+
+
+
+__TECH USED__ 
+
+    • AVPlayerViewController
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/VideoView)
+
+
+# Access the music in the application (MusicPlayer)
+
+General Explanation... 
+
+I enabled the user to access the music she wanted in the application and turn that music on and off
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(47).png)  
+
+
+__TECH USED__ 
+
+    • AVAudioPlayer
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/MusicPlayer)
+
+
+# Saving data with CoreData, listing data(Coredata)
+
+General Explanation... 
+
+I had the user save data with CoreData, then retrieve the data and list it with Taleview. At the same time, I went to the phone's album and selected the desired picture.
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(48).png)  ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(55).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(53).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(54).png) 
+
+
+__TECH USED__ 
+
+    • Coredata
+    • UIImagePickerController
+    • Tableview
+    • GestureRecognizer
+    • PlayGrounds
+   
+
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/Coredata)
+
+# Sending and receiving data with NotificationCenter(NotificationCenter)
+
+General Explanation... 
+
+I sent data to the user via NotificationCenter and then captured this data and printed it on the screen.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(57).png)  ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(56).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(58).png)   
+
+
+__TECH USED__ 
+
+    • NotificationCenterPost
+    • NotificationCenterAddObserver
+    • PerformSegue
+    • PlayGrounds
+   
+
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/NotificationCenter)
+
+
+# Using SliderAction and StepperAction(SliderStepper)
+
+General Explanation... 
+
+
+By making the user use SliderAction and StepperAction, I enabled the user to use this method for the action User wanted to perform
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(59).png)
+
+
+__TECH USED__ 
+
+    • SliderAction
+    • StepperAction
+    • PlayGrounds
+   
+
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/SliderStepper)
+
+
 
