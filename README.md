@@ -388,7 +388,7 @@ __TECH USED__
 
 General Explanation... 
 
-I enabled the user to access the video she wanted in the application, start that video and watch it
+I enabled the user to access the video she wanted in the application, turn on that video and watch it
 
 
 
@@ -407,4 +407,23 @@ __TECH USED__
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/VideoView)
 
 
+# Access the music in the application (MusicPlayer)
 
+General Explanation... 
+
+I enabled the user to access the music she wanted in the application and turn that music on and off
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(47).png)  
+
+
+__TECH USED__ 
+
+    • AVAudioPlayer
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/MusicPlayer)
