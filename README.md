@@ -376,11 +376,35 @@ I enabled the user to receive notifications with UNUserNotificationCenter. With 
 
 __TECH USED__ 
 
-    • UNUserNotificationCente
+    • UNUserNotificationCenter
     • PlayGrounds
    
  
   
 
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/AllowInApp)
+
+# Access the video in the application (VideoView)
+
+General Explanation... 
+
+I enabled the user to access the video she wanted in the application, start that video and watch it
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(45).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(46).png)  
+
+
+
+__TECH USED__ 
+
+    • AVPlayerViewController
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/VideoView)
+
+
 
