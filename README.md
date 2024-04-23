@@ -337,4 +337,27 @@ __TECH USED__
 [Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/DataTransfer-Show)
 
 
+# Introduction to navigation controller with code (NavigationControllerIntroduction)
+
+General Explanation... 
+
+It was done to create Navigation Controller using code and enable user to use it. Using this structure, desired explanations can be created in the code content. Any segment can be used using SegmentIndex.
+
+
+
+![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(38).png)   ![alt text](https://github.com/Eren3567/Swift_Task/blob/main/imagess/Simulator%20Screenshot%20-%20iPhone%2015%20(39).png)  
+
+
+
+__TECH USED__ 
+
+    • navigationController
+    • SegmentIndex
+    • PlayGrounds
+   
+ 
+  
+
+[Github Link Here](https://github.com/Eren3567/Swift_Task/tree/main/NavigationControllerIntroduction)
+
 
