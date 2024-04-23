@@ -17,7 +17,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         Table.delegate = self
         Table.dataSource = self
         
-        letter = ["a","b","c","d"]
+        letter = ["first","second","third","fourth"]
       
     }
     
