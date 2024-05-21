@@ -115,7 +115,7 @@ class ViewController: UIViewController {
             cell.Label1.text = book.artistName
             cell.Label2.text = book.name
             
-            if let url = URL(string: book.artworkUrl100) {
+            if let url = URL(string: book.artworkUrl100) { dispatch
                 URLSession.shared.dataTask(with: url) { (data, response, error) in
                     if let data = data {
                         DispatchQueue.main.async {
