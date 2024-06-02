@@ -10,6 +10,7 @@ import UIKit
 import AlamofireDynamic
 import Alamofire_Alamofire
 import Pods_Alamofire
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 class NotEkleViewController: UIViewController {
     @IBOutlet weak var textfieldDersAdi: UITextField!
