@@ -1,5 +1,0 @@
- extern const unsigned char Pods_AlamofireVersionString[];
- extern const double Pods_AlamofireVersionNumber;
-
- const unsigned char Pods_AlamofireVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_Alamofire  PROJECT:Pods-1" "\n";
- const double Pods_AlamofireVersionNumber __attribute__ ((used)) = (double)1.;
