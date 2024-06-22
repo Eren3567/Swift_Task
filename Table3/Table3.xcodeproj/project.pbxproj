@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A07AE072C275F060019D3F7 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A07AE062C275F060019D3F7 /* ViewController2.swift */; };
 		7A8FE47D2B650B180006F335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FE47C2B650B180006F335 /* AppDelegate.swift */; };
 		7A8FE47F2B650B180006F335 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FE47E2B650B180006F335 /* SceneDelegate.swift */; };
 		7A8FE4812B650B180006F335 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FE4802B650B180006F335 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A07AE062C275F060019D3F7 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		7A8FE4792B650B180006F335 /* Table3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Table3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8FE47C2B650B180006F335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8FE47E2B650B180006F335 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				7A8FE47C2B650B180006F335 /* AppDelegate.swift */,
 				7A8FE47E2B650B180006F335 /* SceneDelegate.swift */,
 				7A8FE4802B650B180006F335 /* ViewController.swift */,
+				7A07AE062C275F060019D3F7 /* ViewController2.swift */,
 				7A8FE4922B650C1E0006F335 /* TableViewCell.swift */,
 				7A8FE4902B650B2F0006F335 /* Class2.swift */,
 				7A8FE4822B650B180006F335 /* Main.storyboard */,
@@ -149,6 +152,7 @@
 				7A8FE47D2B650B180006F335 /* AppDelegate.swift in Sources */,
 				7A8FE47F2B650B180006F335 /* SceneDelegate.swift in Sources */,
 				7A8FE4912B650B2F0006F335 /* Class2.swift in Sources */,
+				7A07AE072C275F060019D3F7 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
