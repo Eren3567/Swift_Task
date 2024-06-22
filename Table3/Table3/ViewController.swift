@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var Table: UITableView!
     var username = [Class2]()
+    var name = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         Table.delegate = self
@@ -33,11 +34,11 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource,cellProtocol
         print(username[indexpath.row].name)
     }
     
- 
-  
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return username.count
+        return username.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,19 +54,28 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource,cellProtocol
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let getname = username[indexPath.row]
+        name = username[indexPath.row].name
+        performSegue(withIdentifier: "cell2", sender: name)
         print(getname.name)
         print(getname.phoneNumber)
     }
     
-    
-    
-    
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "cell2" {
+                if let controlVC = segue.destination as? ViewController2, let category = sender as? String {
+                    controlVC.label2text = category
+                }
+            }
+        
+        
+        
+        
+        
+        
+        
+    }
     
     
     
 }
-
-
-
