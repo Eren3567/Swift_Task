@@ -107,11 +107,11 @@ class ViewController: UIViewController {
             let favoriteButton = UIButton(type: .custom)
                 let iconImage = UIImage(systemName: "star")
                 favoriteButton.setImage(iconImage, for: .normal)
-                favoriteButton.tintColor = .systemYellow // İsteğe bağlı: Buton rengini ayarlayabilirsiniz
-                favoriteButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30) // Buton boyutunu ayarlayabilirsiniz
+                favoriteButton.tintColor = .systemYellow // İsteğe bağlı: Buton rengini ayarlayabiliriz
+                favoriteButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30) // Buton boyutunu ayarlayabiliriz
                 favoriteButton.addTarget(self, action: #selector(addToFavoritesButtonTapped(_:)), for: .touchUpInside)
-                favoriteButton.tag = indexPath.row // Butona hangi öğenin tıklandığını belirlemek için indeks sırasını saklayın
-                cell.accessoryView = favoriteButton // Hücrenin aksesuar görünümü olarak favori butonunu ayarlayın
+                favoriteButton.tag = indexPath.row // Butona hangi öğenin tıklandığını belirlemek için indeks sırası saklanır
+                cell.accessoryView = favoriteButton // Hücrenin aksesuar görünümü olarak favori butonu ayarlanır
             cell.Label1.text = book.artistName
             cell.Label2.text = book.name
             
@@ -129,24 +129,24 @@ class ViewController: UIViewController {
         }
         
         @objc func addToFavoritesButtonTapped(_ sender: UIButton) {
-            // Hangi öğenin favori butonuna tıklandığını alın
+            // Hangi öğenin favori butonuna tıklandığını alırız
             let index = sender.tag
             let book = isSearching ? filteredBooks[index] : books[index]
             
-            // Favori butonunun icon durumunu kontrol edin
+            // Favori butonunun icon durumunu kontrol ediriz
             if sender.currentImage == UIImage(systemName: "star.fill") {
                 // Eğer butonun iconu star.fill ise, bu öğe favorilere eklenmiş demektir
-                // Bu durumda, öğeyi favorilerden kaldırın
+                // Bu durumda, öğeyi favorilerden kaldırırız
                 removeFromFavorites(book: book)
                 
-                // Favori butonunun iconunu star olarak değiştirin
+                // Favori butonunun iconunu star olarak değiştirelim
                 sender.setImage(UIImage(systemName: "star"), for: .normal)
             } else {
                 // Eğer butonun iconu star değilse, bu öğe favorilere eklenmemiş demektir
-                // Bu durumda, öğeyi favorilere ekleyin
+                // Bu durumda, öğeyi favorilere ekleriz
                 addToFavorites(book: book)
                 
-                // Favori butonunun iconunu star.fill olarak değiştirin
+                // Favori butonunun iconunu star.fill olarak değiştiririz
                 sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
             }
         }
@@ -155,7 +155,7 @@ class ViewController: UIViewController {
             let db = Firestore.firestore()
             let favoritesCollection = db.collection("favorites")
             
-            // Favori öğeyi Firestore koleksiyonunda arayın ve belge referansını alın
+            // Favori öğeyi Firestore koleksiyonunda arayın ve belge referansını alırız
             favoritesCollection.whereField("name", isEqualTo: book.name).whereField("artistName", isEqualTo: book.artistName).whereField("artworkUrl100", isEqualTo: book.artworkUrl100).getDocuments { (querySnapshot, error) in
                 if let error = error {
                     print("Favori kaldırılırken hata oluştu: \(error)")
@@ -167,7 +167,7 @@ class ViewController: UIViewController {
                     return
                 }
                 
-                // Belge bulunduysa, her bir belgeyi kaldırın
+                // Belge bulunduysa, her bir belgeyi kaldırırız
                 for document in documents {
                     document.reference.delete()
                 }
