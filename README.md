@@ -56,7 +56,6 @@ In Core Data, I defined the data that the user should use. I asked the user to e
 
 __TECH USED__ 
 
-    • Core Data
     • PlayGrounds
     • TableView
     • TableStructure 
