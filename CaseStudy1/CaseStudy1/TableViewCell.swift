@@ -23,7 +23,7 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        ImageView.layer.cornerRadius = 10 // veya istediğiniz bir değer
+        ImageView.layer.cornerRadius = 10 // veya istediğimiz bir değerdir
         ImageView.clipsToBounds = true
         // Initialization code
     }
@@ -34,21 +34,21 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setImageFromFirestore() {
-           let storage = Storage.storage() // Firebase Storage nesnesini oluştur
-           let storageRef = storage.reference() // Firebase Storage referansını al
+           let storage = Storage.storage() // Firebase Storage nesnesini oluşturduk
+           let storageRef = storage.reference() // Firebase Storage referansını alrız
            
-           // Resmin bulunduğu referansı belirt
+           // Resmin bulunduğu referansı belirtiriz
            let imageRef = storageRef.child("images/image1.jpg")
            
-           // Resmi indir
+           // Resmi indirriz
            imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
                if let error = error {
                    print("Error downloading image: \(error.localizedDescription)")
                } else {
-                   // İndirilen veriyi UIImage olarak oluştur
+                   // İndirilen veriyi UIImage olarak oluşturduk
                    if let imageData = data, let image = UIImage(data: imageData) {
                        DispatchQueue.main.async {
-                           // UIImage'i kullanarak iconimage1 görünümüne ata
+                           // UIImage'i kullanarak iconimage1 görünümüne atadık
                            self.iconimage1.image = image
                        }
                    } else {
