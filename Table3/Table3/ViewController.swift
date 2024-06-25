@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var Table: UITableView!
     var username = [Class2]()
-    var name = ""
+    var name1 = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         Table.delegate = self
@@ -54,8 +54,8 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource,cellProtocol
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let getname = username[indexPath.row]
-        name = username[indexPath.row].name
-        performSegue(withIdentifier: "cell2", sender: name)
+        name1 = username[indexPath.row].name
+        performSegue(withIdentifier: "cell2", sender: name1)
         print(getname.name)
         print(getname.phoneNumber)
     }
