@@ -124,7 +124,6 @@
 		7AA0EF132B40AC0C009AA89D /* FirstFirebaseApplication */ = {
 			isa = PBXGroup;
 			children = (
-				7AA0EF282B40AE23009AA89D /* GoogleService-Info.plist */,
 				7AA0EF142B40AC0C009AA89D /* AppDelegate.swift */,
 				7AA0EF612B40BD6D009AA89D /* FeedController.swift */,
 				7AA0EF632B40BD8C009AA89D /* UploadViewController.swift */,
@@ -135,6 +134,7 @@
 				7AA0EF1A2B40AC0C009AA89D /* Main.storyboard */,
 				7AA0EF1D2B40AC0D009AA89D /* Assets.xcassets */,
 				7AA0EF1F2B40AC0D009AA89D /* LaunchScreen.storyboard */,
+				7AA0EF282B40AE23009AA89D /* GoogleService-Info.plist */,
 				7AA0EF222B40AC0D009AA89D /* Info.plist */,
 			);
 			path = FirstFirebaseApplication;
