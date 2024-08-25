@@ -117,6 +117,10 @@ let carp = { (sayi: Int) -> Int in
     return sayi * 2
 }
 
+//func carp(sayi: Int) -> Int {
+  //  return sayi * 2}
+
+
 let carpilanSayilar = sayilar.map(carp)
 
 print("Çarpılan Sayılar: \(carpilanSayilar)")
@@ -248,4 +252,41 @@ for index in 0..<3 {
     let number = [arrayLikeTuple.0, arrayLikeTuple.1, arrayLikeTuple.2][index]
     print("Number at index \(index): \(number)")
 }
+
+let hour = 10
+
+switch hour {
+case 0...5:
+    print("It's early morning.")
+case 6...11:
+    print("It's morning.")
+case 12...17:
+    print("It's afternoon.")
+case 18...23:
+    print("It's evening.")
+default:
+    print("Invalid hour.")
+}
+
+
+enum Direction {
+    case north
+    case south
+    case east
+    case west
+}
+
+let travelDirection = Direction.east
+
+switch travelDirection {
+case .north:
+    print("Heading North!")
+case .south:
+    print("Heading South!")
+case .east:
+    print("Heading East!")
+case .west:
+    print("Heading West!")
+}
+
 
