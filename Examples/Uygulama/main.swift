@@ -280,7 +280,7 @@ let travelDirection = Direction.east
 
 switch travelDirection {
 case .north:
-    print("Heading North!")
+    print("Heading North")
 case .south:
     print("Heading South!")
 case .east:
