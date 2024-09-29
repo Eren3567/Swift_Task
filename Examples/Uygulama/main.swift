@@ -235,13 +235,14 @@ print("Farklı meyveler: \(farkliMeyveler)")
 
 
 // Üç öğeli bir Int tuple tanımlayalım
-let numbers1: (Int, Int, Int, Int) = (1, 2, 3, 4)
+let numbers1: (Int, Int, Int, Int, String) = (1, 2, 3, 4,"beş")
 
 // Tuple öğelerine indekslerle erişelim
 let firstNumber = numbers1.0
 let secondNumber = numbers1.1
 let thirdNumber = numbers1.2
 let fourtNumber = numbers1.3
+let fifthNumber = numbers1.4
 print("First number: \(firstNumber)")    // First number: 1
 print("Second number: \(secondNumber)")  // Second number: 2
 print("Third number: \(thirdNumber)")    // Third number: 3
