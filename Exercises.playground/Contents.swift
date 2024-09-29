@@ -392,7 +392,7 @@ catch Hatalar.sifiraBolumezHatasi{
 let queu = DispatchQueue(label: "etiket",qos: DispatchQoS.background)
 let queu2 = DispatchQueue(label: "etiket2",qos: DispatchQoS.userInitiated)
 queu.async {
-    for b in 1...10{
+    for b in 1...12{
         print(b)
         
     }
