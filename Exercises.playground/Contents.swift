@@ -113,6 +113,7 @@ class Hayvan {
         
         override func sesCikar() {
             print("ses çıkmıyor")
+            super.sesCikar()
         }
     }
 
@@ -367,12 +368,12 @@ func KisiTanimi(ad:String){
 // do try catch
 
 enum Hatalar : Error {
-    case sifiraBolumezHatasi
+    case sifiraBolumezHatas
 }
 
 func bolme (s1: Int, s2 : Int) throws-> Int{
     if s2 == 0{
-        throw Hatalar.sifiraBolumezHatasi
+        throw Hatalar.sifiraBolumezHatas
     }
     
     return s1/s2
@@ -385,7 +386,7 @@ do {
     let sonuc = try bolme(s1: s1, s2: s2)
 }
 
-catch Hatalar.sifiraBolumezHatasi{
+catch Hatalar.sifiraBolumezHatas{
     print("sifira bölünemez")
 }
 // Dispatch queu Thread-----------------------------------------------------------
