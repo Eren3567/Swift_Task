@@ -404,3 +404,47 @@ queu2.async {
     }
 }
 
+enum HavaDurumu {
+    case gunesli
+    case yagmurlu
+    case bulutlu
+}
+
+var bugun = HavaDurumu.gunesli
+var yarın = HavaDurumu.yagmurlu
+switch yarın {
+case .gunesli:
+    print("Bugün hava güneşli.")
+case .yagmurlu:
+    print("Bugün hava yağmurlu.")
+case .bulutlu:
+    print("Bugün hava bulutlu.")
+}
+
+
+protocol YemekDelegate {
+    var hiz: Int { get set }  // Hem okuyabilir hem yazabilir
+    func yemekYap()
+}
+
+class Asci: YemekDelegate {
+    var hiz: Int = 0
+    
+    func yemekYap() {
+        print("Aşçı yemek yapıyor.")
+    }
+}
+
+class Mutfak {
+    var delegate: YemekDelegate?
+    
+    func yemekPisir() {
+        delegate?.yemekYap()
+    }
+}
+
+let asci = Asci()
+let mutfak = Mutfak()
+
+mutfak.delegate = asci
+mutfak.yemekPisir()  // Çıktı: Aşçı yemek yapıyor.
