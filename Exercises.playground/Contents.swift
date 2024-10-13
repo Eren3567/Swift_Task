@@ -448,3 +448,80 @@ let mutfak = Mutfak()
 
 mutfak.delegate = asci
 mutfak.yemekPisir()  // Çıktı: Aşçı yemek yapıyor.
+
+
+let meyve = "Elma"
+
+switch meyve {
+case "Elma":
+    print("Meyve bir elmadır.")
+case "Muz":
+    print("Meyve bir muzdur.")
+case "Portakal":
+    print("Meyve bir portakaldır.")
+default:
+    print("Meyve tanımlanamadı.")
+}
+
+func kontrolEt(deger: Any) {
+    switch deger {
+    case let deger as Int:
+        print("Değer bir Int: \(deger)")
+    case let deger as String:
+        print("Değer bir String: \(deger)")
+    case let deger as Double:
+        print("Değer bir Double: \(deger)")
+    default:
+        print("Değer bilinmiyor.")
+    }
+}
+
+kontrolEt(deger: 42)           // Çıktı: Değer bir Int: 42
+kontrolEt(deger: "Merhaba")    // Çıktı: Değer bir String: Merhaba
+kontrolEt(deger: 3.14)         // Çıktı: Değer bir Double: 3.14
+kontrolEt(deger: true)         // Çıktı: Değer bilinmiyor.
+
+let sayi = -10
+
+switch sayi {
+case let x where x < 0:
+    print("Sayı negatif: \(x)")
+case let x where x > 0:
+    print("Sayı pozitif: \(x)")
+default:
+    print("Sayı sıfırdır.")
+}
+
+enum KullaniciRolü {
+    case admin
+    case editör
+    case ziyaretçi
+}
+
+let kullanici = KullaniciRolü.editör
+
+switch kullanici {
+case .admin:
+    print("Yönetici paneline erişim.")
+case .editör:
+    print("İçerik düzenleme yetkisi.")
+case .ziyaretçi:
+    print("Sadece görüntüleme yetkisi.")
+}
+
+let not = 75
+
+switch not {
+case 90...100:
+    print("A")
+case 80...89:
+    print("B")
+case 70...79:
+    print("C")
+case 60...69:
+    print("D")
+case 0...59:
+    print("F")
+default:
+    print("Geçersiz not")
+}
