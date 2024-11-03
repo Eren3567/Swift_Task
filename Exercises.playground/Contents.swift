@@ -525,3 +525,45 @@ case 0...59:
 default:
     print("Geçersiz not")
 }
+
+
+// Harf notunu hesaplayan yardımcı fonksiyon
+func harfNotuHesapla(not: Int) -> String {
+    switch not {
+    case 90...100:
+        return "A"
+    case 80..<90:
+        return "B"
+    case 70..<80:
+        return "C"
+    case 60..<70:
+        return "D"
+    default:
+        return "F"
+    }
+}
+
+// Öğrencinin ders adlarını ve notlarını alarak harf notlarını hesaplayan fonksiyon
+func dersHarfNotlari(ad: String, dersler: [String: Int]) -> (ad: String, harfNotlari: [String]) {
+    var harfNotlari = [String]()
+    
+    for keyValuePair in dersler {
+        let ders = keyValuePair.key
+        let not1 = keyValuePair.value
+        // Harf notunu ekleyerek diziyi doldur
+        harfNotlari.append("\(ders): \(harfNotuHesapla(not: not1))")
+    }
+    
+    return (ad, harfNotlari)
+}
+
+// Fonksiyonu çağırarak kullanmak
+let derslerNotlari = [
+    "Matematik": 85,
+    "Fizik": 92,
+    "Kimya": 76,
+    "Biyoloji": 88
+]
+
+let sonuc1 = dersHarfNotlari(ad: "Ali", dersler: derslerNotlari)
+print("Öğrenci: \(sonuc1.ad), Harf Notları: \(sonuc1.harfNotlari)")
